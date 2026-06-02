@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundamentos de Estatística — Distribuições de Frequência e Tabelas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="index.html" class="btn-back">← Voltar ao Menu</a>
+<div class="aula-container">
+  <div class="aula-hero">
+    <div class="aula-num">AULA 3 • REVISÃO</div>
+    <h1>📋 Distribuições de Frequência e Tabelas</h1>
+    <div class="aula-meta">
+      <span>📅 20/05/2026</span>
+      <span>⏱ 4 aulas de 50 minutos</span>
+      <span>🎯 Escola que Queremos</span>
+      <span>📚 Fundamentos de Estatística · 1º Ano A</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🎯 O que vamos aprender?</h2>
+    <p>Hoje vamos transformar respostas soltas em informação organizada. A ideia é contar ocorrências e montar tabelas que deixem os resultados do projeto mais claros.</p>
+    <div class="destaque">💡 Aplicação no projeto: Começar a organizar respostas por ocorrência e mostrar por que o painel precisa de tabelas claras.</div>
+  </div>
+  <div class="card roxo">
+    <h2>📘 Conteúdo principal</h2>
+    <div class="conceito-box"><strong>Conceito central:</strong> Distribuição de frequência mostra quantas vezes cada resposta aparece.</div>
+    <p>A frequência absoluta indica o número de vezes em que uma categoria aparece. A frequência relativa mostra a proporção ou porcentagem dessa ocorrência. Organizar os dados em tabelas permite comparar respostas, identificar prioridades e preparar os dados para gráficos e interpretações do projeto.</p>
+  </div>
+  <div class="caderno-section">
+    <h3>📝 Resumo para o Caderno — Distribuições de Frequência e Tabelas</h3>
+    <ol>
+      <li>Distribuição de frequência organiza respostas por ocorrência.</li>
+      <li>Frequência absoluta é a contagem simples.</li>
+      <li>Frequência relativa mostra a proporção ou porcentagem.</li>
+      <li>Tabelas organizam dados em linhas e colunas.</li>
+      <li>Uma boa tabela facilita a comparação.</li>
+      <li>Respostas soltas ficam mais claras em tabela.</li>
+      <li>No projeto, a tabela mostra o que aparece mais.</li>
+      <li>Também ajuda a perceber o que aparece menos.</li>
+      <li>Tabelas preparam os dados para gráficos.</li>
+      <li>Organizar bem é essencial para analisar melhor.</li>
+    </ol>
+  </div>
+  <div class="quiz-section">
+    <h2>🎮 Quiz — Frequência e Tabelas</h2>
+    <p style="opacity:0.8;margin-bottom:16px">10 questões para testar seu conhecimento!</p>
+  
+<style>
+.quiz-panel{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 18px}
+.quiz-stat{background:#fff;color:#1F0A3C;border-radius:14px;padding:14px;text-align:center;box-shadow:0 6px 18px rgba(59,7,100,.12);border:1px solid #E9D5FF}
+.quiz-stat strong{display:block;font-size:1.3rem;margin-top:4px}
+.progress-wrap{background:#E5E7EB;border-radius:999px;height:14px;overflow:hidden;margin:14px 0}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#FF6B35,#A855F7)}
+.quiz-meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.quiz-pill{background:#fff;border:1px solid #E9D5FF;border-radius:999px;padding:8px 14px;color:#1F0A3C;font-weight:700}
+.quiz-question{background:#fff;border:2px solid #E9D5FF;border-radius:16px;padding:18px;margin:16px 0;color:#1F0A3C}
+.quiz-question h4{margin-bottom:12px;font-size:1rem}
+.quiz-option{display:block;margin:8px 0;padding:10px 12px;border-radius:12px;border:1px solid #D8B4FE;cursor:pointer;background:#FAF5FF;color:#1F0A3C;font-weight:600}
+.quiz-option input{margin-right:10px}
+.quiz-question.correct{border-color:#22C55E;background:#F0FDF4}
+.quiz-question.incorrect{border-color:#EF4444;background:#FEF2F2}
+.quiz-feedback{margin-top:10px;font-weight:700}
+.quiz-actions{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.quiz-btn{background:linear-gradient(90deg,#6B21A8,#FF6B35);color:#fff;border:none;border-radius:999px;padding:12px 22px;font-weight:700;cursor:pointer}
+.quiz-btn.secondary{background:#fff;color:#6B21A8;border:2px solid #6B21A8}
+@media(max-width:720px){.quiz-panel{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+    <div class="quiz-panel">
+      <div class="quiz-stat">Pontos<strong id="points">0</strong></div>
+      <div class="quiz-stat">Acertos<strong id="correct">0</strong></div>
+      <div class="quiz-stat">Respondidas<strong id="answered">0/10</strong></div>
+      <div class="quiz-stat">Nível<strong id="level">Iniciante</strong></div>
+    </div>
+    <div class="progress-wrap"><div class="progress-bar" id="progress"></div></div>
+    <div class="quiz-meta">
+      <div class="quiz-pill">💬 <span id="message">Responda as questões e acompanhe seu desempenho!</span></div>
+      <div class="quiz-pill">❌ Erros: <span id="errors">0</span></div>
+      <div class="quiz-pill">📌 Restantes: <span id="remaining">10</span></div>
+    </div>
+    <div class="quiz-question" id="q0" data-done="0"><h4>1. O que a distribuição de frequência mostra?</h4><label class="quiz-option"><input type="radio" name="q0" value="0"> <strong>A.</strong> Quantas vezes cada resposta aparece.</label><label class="quiz-option"><input type="radio" name="q0" value="1"> <strong>B.</strong> A opinião do professor.</label><label class="quiz-option"><input type="radio" name="q0" value="2"> <strong>C.</strong> O horário da aula.</label><label class="quiz-option"><input type="radio" name="q0" value="3"> <strong>D.</strong> A média final da turma.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q1" data-done="0"><h4>2. O que é frequência absoluta?</h4><label class="quiz-option"><input type="radio" name="q1" value="0"> <strong>A.</strong> A porcentagem de cada resposta.</label><label class="quiz-option"><input type="radio" name="q1" value="1"> <strong>B.</strong> A contagem de vezes que a resposta aparece.</label><label class="quiz-option"><input type="radio" name="q1" value="2"> <strong>C.</strong> O gráfico pronto.</label><label class="quiz-option"><input type="radio" name="q1" value="3"> <strong>D.</strong> A soma da média com a mediana.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q2" data-done="0"><h4>3. O que é frequência relativa?</h4><label class="quiz-option"><input type="radio" name="q2" value="0"> <strong>A.</strong> A ordem das categorias.</label><label class="quiz-option"><input type="radio" name="q2" value="1"> <strong>B.</strong> O valor do meio.</label><label class="quiz-option"><input type="radio" name="q2" value="2"> <strong>C.</strong> A proporção ou porcentagem de ocorrência.</label><label class="quiz-option"><input type="radio" name="q2" value="3"> <strong>D.</strong> A diferença entre extremos.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q3" data-done="0"><h4>4. Qual é a principal função da tabela?</h4><label class="quiz-option"><input type="radio" name="q3" value="0"> <strong>A.</strong> Inventar dados novos.</label><label class="quiz-option"><input type="radio" name="q3" value="1"> <strong>B.</strong> Substituir a coleta.</label><label class="quiz-option"><input type="radio" name="q3" value="2"> <strong>C.</strong> Esconder resultados.</label><label class="quiz-option"><input type="radio" name="q3" value="3"> <strong>D.</strong> Organizar informações com clareza.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q4" data-done="0"><h4>5. No projeto da escola, a tabela ajuda a:</h4><label class="quiz-option"><input type="radio" name="q4" value="0"> <strong>A.</strong> Comparar respostas dos públicos.</label><label class="quiz-option"><input type="radio" name="q4" value="1"> <strong>B.</strong> Limpar tecnicamente a base.</label><label class="quiz-option"><input type="radio" name="q4" value="2"> <strong>C.</strong> Criar hipóteses investigativas.</label><label class="quiz-option"><input type="radio" name="q4" value="3"> <strong>D.</strong> Fazer apresentações orais.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q5" data-done="0"><h4>6. Quando uma resposta aparece 8 vezes em 20, sua frequência relativa pode ser expressa em:</h4><label class="quiz-option"><input type="radio" name="q5" value="0"> <strong>A.</strong> Moda</label><label class="quiz-option"><input type="radio" name="q5" value="1"> <strong>B.</strong> Porcentagem</label><label class="quiz-option"><input type="radio" name="q5" value="2"> <strong>C.</strong> Mediana</label><label class="quiz-option"><input type="radio" name="q5" value="3"> <strong>D.</strong> Amplitude</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q6" data-done="0"><h4>7. O que vem primeiro ao montar uma tabela?</h4><label class="quiz-option"><input type="radio" name="q6" value="0"> <strong>A.</strong> Desenhar o gráfico.</label><label class="quiz-option"><input type="radio" name="q6" value="1"> <strong>B.</strong> Escolher o teste estatístico.</label><label class="quiz-option"><input type="radio" name="q6" value="2"> <strong>C.</strong> Identificar categorias e contar ocorrências.</label><label class="quiz-option"><input type="radio" name="q6" value="3"> <strong>D.</strong> Escrever a conclusão final.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q7" data-done="0"><h4>8. Uma tabela clara facilita:</h4><label class="quiz-option"><input type="radio" name="q7" value="0"> <strong>A.</strong> Apenas a cópia no caderno.</label><label class="quiz-option"><input type="radio" name="q7" value="1"> <strong>B.</strong> Somente a revisão do texto.</label><label class="quiz-option"><input type="radio" name="q7" value="2"> <strong>C.</strong> A leitura e a comparação dos dados.</label><label class="quiz-option"><input type="radio" name="q7" value="3"> <strong>D.</strong> A troca de disciplina.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q8" data-done="0"><h4>9. Se “banheiro” aparece mais do que as outras respostas, ele terá maior:</h4><label class="quiz-option"><input type="radio" name="q8" value="0"> <strong>A.</strong> Frequência</label><label class="quiz-option"><input type="radio" name="q8" value="1"> <strong>B.</strong> Variância</label><label class="quiz-option"><input type="radio" name="q8" value="2"> <strong>C.</strong> Amplitude</label><label class="quiz-option"><input type="radio" name="q8" value="3"> <strong>D.</strong> Regressão</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q9" data-done="0"><h4>10. Por que frequência e tabela são importantes?</h4><label class="quiz-option"><input type="radio" name="q9" value="0"> <strong>A.</strong> Porque transformam respostas em informação organizada.</label><label class="quiz-option"><input type="radio" name="q9" value="1"> <strong>B.</strong> Porque dispensam os dados.</label><label class="quiz-option"><input type="radio" name="q9" value="2"> <strong>C.</strong> Porque impedem comparações.</label><label class="quiz-option"><input type="radio" name="q9" value="3"> <strong>D.</strong> Porque servem só para decorar.</label><div class="quiz-feedback"></div></div><p id="final" style="font-weight:800;color:#1F0A3C;margin-top:12px"></p><div class="quiz-actions"><button class="quiz-btn secondary" id="restartQuiz">🔄 Reiniciar quiz</button></div>
+<script>
+(function(){
+ const quizData = [{"prompt": "O que a distribuição de frequência mostra?", "options": ["Quantas vezes cada resposta aparece.", "A opinião do professor.", "O horário da aula.", "A média final da turma."], "correct": 0}, {"prompt": "O que é frequência absoluta?", "options": ["A porcentagem de cada resposta.", "A contagem de vezes que a resposta aparece.", "O gráfico pronto.", "A soma da média com a mediana."], "correct": 1}, {"prompt": "O que é frequência relativa?", "options": ["A ordem das categorias.", "O valor do meio.", "A proporção ou porcentagem de ocorrência.", "A diferença entre extremos."], "correct": 2}, {"prompt": "Qual é a principal função da tabela?", "options": ["Inventar dados novos.", "Substituir a coleta.", "Esconder resultados.", "Organizar informações com clareza."], "correct": 3}, {"prompt": "No projeto da escola, a tabela ajuda a:", "options": ["Comparar respostas dos públicos.", "Limpar tecnicamente a base.", "Criar hipóteses investigativas.", "Fazer apresentações orais."], "correct": 0}, {"prompt": "Quando uma resposta aparece 8 vezes em 20, sua frequência relativa pode ser expressa em:", "options": ["Moda", "Porcentagem", "Mediana", "Amplitude"], "correct": 1}, {"prompt": "O que vem primeiro ao montar uma tabela?", "options": ["Desenhar o gráfico.", "Escolher o teste estatístico.", "Identificar categorias e contar ocorrências.", "Escrever a conclusão final."], "correct": 2}, {"prompt": "Uma tabela clara facilita:", "options": ["Apenas a cópia no caderno.", "Somente a revisão do texto.", "A leitura e a comparação dos dados.", "A troca de disciplina."], "correct": 3}, {"prompt": "Se “banheiro” aparece mais do que as outras respostas, ele terá maior:", "options": ["Frequência", "Variância", "Amplitude", "Regressão"], "correct": 0}, {"prompt": "Por que frequência e tabela são importantes?", "options": ["Porque transformam respostas em informação organizada.", "Porque dispensam os dados.", "Porque impedem comparações.", "Porque servem só para decorar."], "correct": 1}];
+ let points=0, correctCount=0, answered=0, errors=0;
+ function levelFromPoints(p){ if(p>=90) return "Mestre"; if(p>=70) return "Avançado"; if(p>=40) return "Intermediário"; return "Iniciante"; }
+ function renderStats(){
+   document.getElementById('points').textContent = points;
+   document.getElementById('correct').textContent = correctCount;
+   document.getElementById('answered').textContent = answered + "/" + quizData.length;
+   document.getElementById('level').textContent = levelFromPoints(points);
+   document.getElementById('errors').textContent = errors;
+   document.getElementById('remaining').textContent = quizData.length - answered;
+   const percent = (answered/quizData.length)*100;
+   document.getElementById('progress').style.width = percent + '%';
+   let msg = "Você está começando muito bem!";
+   if (answered === 0) msg = "Responda as questões e acompanhe seu desempenho!";
+   else if (correctCount === quizData.length) msg = "Perfeito! Desempenho excelente!";
+   else if (correctCount/answered >= 0.8) msg = "Ótimo ritmo! Continue assim!";
+   else if (correctCount/answered >= 0.5) msg = "Bom caminho! Revise alguns pontos.";
+   else msg = "Vale revisar a aula e tentar novamente.";
+   document.getElementById('message').textContent = msg;
+   if(answered===quizData.length){
+      document.getElementById('final').textContent = `Quiz finalizado! Você fez ${points} pontos e acertou ${correctCount} de ${quizData.length}.`;
+   } else {
+      document.getElementById('final').textContent = '';
+   }
+ }
+ function bindQuiz(){
+   quizData.forEach((q, idx)=>{
+      const wrapper = document.getElementById('q'+idx);
+      wrapper.querySelectorAll('input').forEach((input)=>{
+          input.addEventListener('change', function(){
+             if(wrapper.dataset.done === '1') return;
+             wrapper.dataset.done = '1';
+             answered += 1;
+             const selected = Number(this.value);
+             const feedback = wrapper.querySelector('.quiz-feedback');
+             if(selected === q.correct){
+                points += 10;
+                correctCount += 1;
+                wrapper.classList.add('correct');
+                feedback.textContent = "✅ Resposta correta!";
+                feedback.style.color = "#166534";
+             }else{
+                errors += 1;
+                wrapper.classList.add('incorrect');
+                feedback.textContent = "❌ Resposta incorreta. Revise esse ponto da aula.";
+                feedback.style.color = "#991B1B";
+                wrapper.querySelectorAll('label')[q.correct].style.borderColor = "#22C55E";
+                wrapper.querySelectorAll('label')[q.correct].style.background = "#DCFCE7";
+             }
+             wrapper.querySelectorAll('input').forEach(i=>i.disabled=true);
+             renderStats();
+          });
+      });
+   });
+   document.getElementById('restartQuiz').addEventListener('click', function(){
+      points=0; correctCount=0; answered=0; errors=0;
+      document.querySelectorAll('.quiz-question').forEach((wrapper, idx)=>{
+         wrapper.dataset.done='0';
+         wrapper.classList.remove('correct','incorrect');
+         wrapper.querySelector('.quiz-feedback').textContent='';
+         wrapper.querySelectorAll('label').forEach(l=>{
+            l.style.borderColor = '#D8B4FE'; l.style.background = '#FAF5FF';
+         });
+         wrapper.querySelectorAll('input').forEach(i=>{i.disabled=false; i.checked=false;});
+      });
+      renderStats();
+      window.scrollTo({top: document.querySelector('.quiz-section').offsetTop - 20, behavior:'smooth'});
+   });
+   renderStats();
+ }
+ document.addEventListener('DOMContentLoaded', bindQuiz);
+})();
+</script>
+
+</div>
+</div>
+</body>
+</html>

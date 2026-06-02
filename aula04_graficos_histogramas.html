@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundamentos de Estatística — Gráficos e Histogramas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="index.html" class="btn-back">← Voltar ao Menu</a>
+<div class="aula-container">
+  <div class="aula-hero">
+    <div class="aula-num">AULA 4 • REVISÃO</div>
+    <h1>📊 Gráficos e Histogramas</h1>
+    <div class="aula-meta">
+      <span>📅 27/05/2026</span>
+      <span>⏱ 4 aulas de 50 minutos</span>
+      <span>🎯 Escola que Queremos</span>
+      <span>📚 Fundamentos de Estatística · 1º Ano A</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🎯 O que vamos aprender?</h2>
+    <p>Nesta aula, vamos visualizar os dados do projeto. Depois de organizar respostas em tabelas, chegou a hora de perceber como a escola poderá enxergar os resultados de forma mais rápida.</p>
+    <div class="destaque">💡 Aplicação no projeto: Perceber como a escola poderá visualizar os resultados e escolher formas adequadas de representação gráfica.</div>
+  </div>
+  <div class="card roxo">
+    <h2>📘 Conteúdo principal</h2>
+    <div class="conceito-box"><strong>Conceito central:</strong> Gráficos representam dados visualmente e facilitam comparações.</div>
+    <p>Gráficos ajudam a perceber rapidamente o que aparece mais, menos e como os dados se distribuem. O tipo de gráfico depende do tipo de dado. O histograma é útil para dados quantitativos agrupados em intervalos. No projeto, essa visualização ajuda a escola a interpretar resultados com mais clareza.</p>
+  </div>
+  <div class="caderno-section">
+    <h3>📝 Resumo para o Caderno — Gráficos e Histogramas</h3>
+    <ol>
+      <li>Gráficos representam dados de forma visual.</li>
+      <li>Eles facilitam comparações rápidas.</li>
+      <li>Tabela organiza; gráfico ajuda a enxergar.</li>
+      <li>Cada tipo de dado combina com certos gráficos.</li>
+      <li>Gráfico de barras é útil para categorias.</li>
+      <li>Histograma é usado com dados quantitativos agrupados.</li>
+      <li>Um gráfico precisa ser claro e coerente.</li>
+      <li>Leitura crítica evita interpretações erradas.</li>
+      <li>No projeto, gráficos ajudam a escola a visualizar prioridades.</li>
+      <li>Visualizar bem também é parte da análise.</li>
+    </ol>
+  </div>
+  <div class="quiz-section">
+    <h2>🎮 Quiz — Gráficos e Visualização</h2>
+    <p style="opacity:0.8;margin-bottom:16px">10 questões para testar seu conhecimento!</p>
+  
+<style>
+.quiz-panel{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 18px}
+.quiz-stat{background:#fff;color:#1F0A3C;border-radius:14px;padding:14px;text-align:center;box-shadow:0 6px 18px rgba(59,7,100,.12);border:1px solid #E9D5FF}
+.quiz-stat strong{display:block;font-size:1.3rem;margin-top:4px}
+.progress-wrap{background:#E5E7EB;border-radius:999px;height:14px;overflow:hidden;margin:14px 0}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#FF6B35,#A855F7)}
+.quiz-meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.quiz-pill{background:#fff;border:1px solid #E9D5FF;border-radius:999px;padding:8px 14px;color:#1F0A3C;font-weight:700}
+.quiz-question{background:#fff;border:2px solid #E9D5FF;border-radius:16px;padding:18px;margin:16px 0;color:#1F0A3C}
+.quiz-question h4{margin-bottom:12px;font-size:1rem}
+.quiz-option{display:block;margin:8px 0;padding:10px 12px;border-radius:12px;border:1px solid #D8B4FE;cursor:pointer;background:#FAF5FF;color:#1F0A3C;font-weight:600}
+.quiz-option input{margin-right:10px}
+.quiz-question.correct{border-color:#22C55E;background:#F0FDF4}
+.quiz-question.incorrect{border-color:#EF4444;background:#FEF2F2}
+.quiz-feedback{margin-top:10px;font-weight:700}
+.quiz-actions{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.quiz-btn{background:linear-gradient(90deg,#6B21A8,#FF6B35);color:#fff;border:none;border-radius:999px;padding:12px 22px;font-weight:700;cursor:pointer}
+.quiz-btn.secondary{background:#fff;color:#6B21A8;border:2px solid #6B21A8}
+@media(max-width:720px){.quiz-panel{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+    <div class="quiz-panel">
+      <div class="quiz-stat">Pontos<strong id="points">0</strong></div>
+      <div class="quiz-stat">Acertos<strong id="correct">0</strong></div>
+      <div class="quiz-stat">Respondidas<strong id="answered">0/10</strong></div>
+      <div class="quiz-stat">Nível<strong id="level">Iniciante</strong></div>
+    </div>
+    <div class="progress-wrap"><div class="progress-bar" id="progress"></div></div>
+    <div class="quiz-meta">
+      <div class="quiz-pill">💬 <span id="message">Responda as questões e acompanhe seu desempenho!</span></div>
+      <div class="quiz-pill">❌ Erros: <span id="errors">0</span></div>
+      <div class="quiz-pill">📌 Restantes: <span id="remaining">10</span></div>
+    </div>
+    <div class="quiz-question" id="q0" data-done="0"><h4>1. Para que serve um gráfico?</h4><label class="quiz-option"><input type="radio" name="q0" value="0"> <strong>A.</strong> Para representar dados visualmente.</label><label class="quiz-option"><input type="radio" name="q0" value="1"> <strong>B.</strong> Para substituir a coleta de dados.</label><label class="quiz-option"><input type="radio" name="q0" value="2"> <strong>C.</strong> Para apagar respostas repetidas.</label><label class="quiz-option"><input type="radio" name="q0" value="3"> <strong>D.</strong> Para definir o problema da pesquisa.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q1" data-done="0"><h4>2. Qual é a principal diferença entre tabela e gráfico?</h4><label class="quiz-option"><input type="radio" name="q1" value="0"> <strong>A.</strong> Tabela mostra visualmente e gráfico organiza.</label><label class="quiz-option"><input type="radio" name="q1" value="1"> <strong>B.</strong> Tabela organiza e gráfico ajuda a visualizar.</label><label class="quiz-option"><input type="radio" name="q1" value="2"> <strong>C.</strong> Tabela serve para probabilidade.</label><label class="quiz-option"><input type="radio" name="q1" value="3"> <strong>D.</strong> Gráfico serve só para números grandes.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q2" data-done="0"><h4>3. Quando o histograma é mais adequado?</h4><label class="quiz-option"><input type="radio" name="q2" value="0"> <strong>A.</strong> Para dados apenas textuais.</label><label class="quiz-option"><input type="radio" name="q2" value="1"> <strong>B.</strong> Para frequência de opiniões sem números.</label><label class="quiz-option"><input type="radio" name="q2" value="2"> <strong>C.</strong> Para dados quantitativos agrupados em intervalos.</label><label class="quiz-option"><input type="radio" name="q2" value="3"> <strong>D.</strong> Para substituir a mediana.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q3" data-done="0"><h4>4. Por que fazer leitura crítica de um gráfico?</h4><label class="quiz-option"><input type="radio" name="q3" value="0"> <strong>A.</strong> Para decorar o conteúdo.</label><label class="quiz-option"><input type="radio" name="q3" value="1"> <strong>B.</strong> Para colorir melhor a página.</label><label class="quiz-option"><input type="radio" name="q3" value="2"> <strong>C.</strong> Para evitar interpretações erradas.</label><label class="quiz-option"><input type="radio" name="q3" value="3"> <strong>D.</strong> Para trocar o tipo de dado.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q4" data-done="0"><h4>5. No projeto, gráficos ajudam a escola a:</h4><label class="quiz-option"><input type="radio" name="q4" value="0"> <strong>A.</strong> Visualizar resultados com rapidez.</label><label class="quiz-option"><input type="radio" name="q4" value="1"> <strong>B.</strong> Limpar tecnicamente a base.</label><label class="quiz-option"><input type="radio" name="q4" value="2"> <strong>C.</strong> Definir metodologia de campo.</label><label class="quiz-option"><input type="radio" name="q4" value="3"> <strong>D.</strong> Escrever convites.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q5" data-done="0"><h4>6. Qual gráfico costuma funcionar bem com categorias como banheiro, pátio e quadra?</h4><label class="quiz-option"><input type="radio" name="q5" value="0"> <strong>A.</strong> Boxplot</label><label class="quiz-option"><input type="radio" name="q5" value="1"> <strong>B.</strong> Gráfico de barras</label><label class="quiz-option"><input type="radio" name="q5" value="2"> <strong>C.</strong> Histograma</label><label class="quiz-option"><input type="radio" name="q5" value="3"> <strong>D.</strong> Dispersão</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q6" data-done="0"><h4>7. O tipo de gráfico deve considerar:</h4><label class="quiz-option"><input type="radio" name="q6" value="0"> <strong>A.</strong> Somente a cor escolhida.</label><label class="quiz-option"><input type="radio" name="q6" value="1"> <strong>B.</strong> Só o tamanho da turma.</label><label class="quiz-option"><input type="radio" name="q6" value="2"> <strong>C.</strong> O tipo de dado e o objetivo da leitura.</label><label class="quiz-option"><input type="radio" name="q6" value="3"> <strong>D.</strong> A disciplina do dia.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q7" data-done="0"><h4>8. Um gráfico bom deve ser:</h4><label class="quiz-option"><input type="radio" name="q7" value="0"> <strong>A.</strong> Confuso e detalhado demais.</label><label class="quiz-option"><input type="radio" name="q7" value="1"> <strong>B.</strong> Sem título e sem escala.</label><label class="quiz-option"><input type="radio" name="q7" value="2"> <strong>C.</strong> Cheio de efeitos visuais apenas.</label><label class="quiz-option"><input type="radio" name="q7" value="3"> <strong>D.</strong> Claro, coerente e legível.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q8" data-done="0"><h4>9. Histograma e gráfico de barras não são a mesma coisa porque:</h4><label class="quiz-option"><input type="radio" name="q8" value="0"> <strong>A.</strong> Um trabalha com intervalos numéricos e o outro pode representar categorias.</label><label class="quiz-option"><input type="radio" name="q8" value="1"> <strong>B.</strong> Um usa sempre porcentagem.</label><label class="quiz-option"><input type="radio" name="q8" value="2"> <strong>C.</strong> Um não precisa de eixo.</label><label class="quiz-option"><input type="radio" name="q8" value="3"> <strong>D.</strong> O outro só serve para moda.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q9" data-done="0"><h4>10. Visualização de dados no projeto é importante porque:</h4><label class="quiz-option"><input type="radio" name="q9" value="0"> <strong>A.</strong> Ajuda a interpretar prioridades da escola.</label><label class="quiz-option"><input type="radio" name="q9" value="1"> <strong>B.</strong> Substitui todas as medidas estatísticas.</label><label class="quiz-option"><input type="radio" name="q9" value="2"> <strong>C.</strong> Dispensa a tabela.</label><label class="quiz-option"><input type="radio" name="q9" value="3"> <strong>D.</strong> Evita qualquer comparação.</label><div class="quiz-feedback"></div></div><p id="final" style="font-weight:800;color:#1F0A3C;margin-top:12px"></p><div class="quiz-actions"><button class="quiz-btn secondary" id="restartQuiz">🔄 Reiniciar quiz</button></div>
+<script>
+(function(){
+ const quizData = [{"prompt": "Para que serve um gráfico?", "options": ["Para representar dados visualmente.", "Para substituir a coleta de dados.", "Para apagar respostas repetidas.", "Para definir o problema da pesquisa."], "correct": 0}, {"prompt": "Qual é a principal diferença entre tabela e gráfico?", "options": ["Tabela mostra visualmente e gráfico organiza.", "Tabela organiza e gráfico ajuda a visualizar.", "Tabela serve para probabilidade.", "Gráfico serve só para números grandes."], "correct": 1}, {"prompt": "Quando o histograma é mais adequado?", "options": ["Para dados apenas textuais.", "Para frequência de opiniões sem números.", "Para dados quantitativos agrupados em intervalos.", "Para substituir a mediana."], "correct": 2}, {"prompt": "Por que fazer leitura crítica de um gráfico?", "options": ["Para decorar o conteúdo.", "Para colorir melhor a página.", "Para evitar interpretações erradas.", "Para trocar o tipo de dado."], "correct": 3}, {"prompt": "No projeto, gráficos ajudam a escola a:", "options": ["Visualizar resultados com rapidez.", "Limpar tecnicamente a base.", "Definir metodologia de campo.", "Escrever convites."], "correct": 0}, {"prompt": "Qual gráfico costuma funcionar bem com categorias como banheiro, pátio e quadra?", "options": ["Boxplot", "Gráfico de barras", "Histograma", "Dispersão"], "correct": 1}, {"prompt": "O tipo de gráfico deve considerar:", "options": ["Somente a cor escolhida.", "Só o tamanho da turma.", "O tipo de dado e o objetivo da leitura.", "A disciplina do dia."], "correct": 2}, {"prompt": "Um gráfico bom deve ser:", "options": ["Confuso e detalhado demais.", "Sem título e sem escala.", "Cheio de efeitos visuais apenas.", "Claro, coerente e legível."], "correct": 3}, {"prompt": "Histograma e gráfico de barras não são a mesma coisa porque:", "options": ["Um trabalha com intervalos numéricos e o outro pode representar categorias.", "Um usa sempre porcentagem.", "Um não precisa de eixo.", "O outro só serve para moda."], "correct": 0}, {"prompt": "Visualização de dados no projeto é importante porque:", "options": ["Ajuda a interpretar prioridades da escola.", "Substitui todas as medidas estatísticas.", "Dispensa a tabela.", "Evita qualquer comparação."], "correct": 1}];
+ let points=0, correctCount=0, answered=0, errors=0;
+ function levelFromPoints(p){ if(p>=90) return "Mestre"; if(p>=70) return "Avançado"; if(p>=40) return "Intermediário"; return "Iniciante"; }
+ function renderStats(){
+   document.getElementById('points').textContent = points;
+   document.getElementById('correct').textContent = correctCount;
+   document.getElementById('answered').textContent = answered + "/" + quizData.length;
+   document.getElementById('level').textContent = levelFromPoints(points);
+   document.getElementById('errors').textContent = errors;
+   document.getElementById('remaining').textContent = quizData.length - answered;
+   const percent = (answered/quizData.length)*100;
+   document.getElementById('progress').style.width = percent + '%';
+   let msg = "Você está começando muito bem!";
+   if (answered === 0) msg = "Responda as questões e acompanhe seu desempenho!";
+   else if (correctCount === quizData.length) msg = "Perfeito! Desempenho excelente!";
+   else if (correctCount/answered >= 0.8) msg = "Ótimo ritmo! Continue assim!";
+   else if (correctCount/answered >= 0.5) msg = "Bom caminho! Revise alguns pontos.";
+   else msg = "Vale revisar a aula e tentar novamente.";
+   document.getElementById('message').textContent = msg;
+   if(answered===quizData.length){
+      document.getElementById('final').textContent = `Quiz finalizado! Você fez ${points} pontos e acertou ${correctCount} de ${quizData.length}.`;
+   } else {
+      document.getElementById('final').textContent = '';
+   }
+ }
+ function bindQuiz(){
+   quizData.forEach((q, idx)=>{
+      const wrapper = document.getElementById('q'+idx);
+      wrapper.querySelectorAll('input').forEach((input)=>{
+          input.addEventListener('change', function(){
+             if(wrapper.dataset.done === '1') return;
+             wrapper.dataset.done = '1';
+             answered += 1;
+             const selected = Number(this.value);
+             const feedback = wrapper.querySelector('.quiz-feedback');
+             if(selected === q.correct){
+                points += 10;
+                correctCount += 1;
+                wrapper.classList.add('correct');
+                feedback.textContent = "✅ Resposta correta!";
+                feedback.style.color = "#166534";
+             }else{
+                errors += 1;
+                wrapper.classList.add('incorrect');
+                feedback.textContent = "❌ Resposta incorreta. Revise esse ponto da aula.";
+                feedback.style.color = "#991B1B";
+                wrapper.querySelectorAll('label')[q.correct].style.borderColor = "#22C55E";
+                wrapper.querySelectorAll('label')[q.correct].style.background = "#DCFCE7";
+             }
+             wrapper.querySelectorAll('input').forEach(i=>i.disabled=true);
+             renderStats();
+          });
+      });
+   });
+   document.getElementById('restartQuiz').addEventListener('click', function(){
+      points=0; correctCount=0; answered=0; errors=0;
+      document.querySelectorAll('.quiz-question').forEach((wrapper, idx)=>{
+         wrapper.dataset.done='0';
+         wrapper.classList.remove('correct','incorrect');
+         wrapper.querySelector('.quiz-feedback').textContent='';
+         wrapper.querySelectorAll('label').forEach(l=>{
+            l.style.borderColor = '#D8B4FE'; l.style.background = '#FAF5FF';
+         });
+         wrapper.querySelectorAll('input').forEach(i=>{i.disabled=false; i.checked=false;});
+      });
+      renderStats();
+      window.scrollTo({top: document.querySelector('.quiz-section').offsetTop - 20, behavior:'smooth'});
+   });
+   renderStats();
+ }
+ document.addEventListener('DOMContentLoaded', bindQuiz);
+})();
+</script>
+
+</div>
+</div>
+</body>
+</html>

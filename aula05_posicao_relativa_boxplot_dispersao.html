@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundamentos de Estatística — Medidas de Posição Relativa e Representações Gráficas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="index.html" class="btn-back">← Voltar ao Menu</a>
+<div class="aula-container">
+  <div class="aula-hero">
+    <div class="aula-num">AULA 5 • AULA DE HOJE</div>
+    <h1>🎯 Medidas de Posição Relativa e Representações Gráficas</h1>
+    <div class="aula-meta">
+      <span>📅 03/06/2026</span>
+      <span>⏱ 4 aulas de 50 minutos</span>
+      <span>🎯 Escola que Queremos</span>
+      <span>📚 Fundamentos de Estatística · 1º Ano A</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🎯 O que vamos aprender?</h2>
+    <p>Nesta aula, vamos refinar a leitura dos dados do projeto. Além de centro e frequência, agora queremos saber posição, concentração e variação dos resultados em diferentes grupos da escola.</p>
+    <div class="destaque">💡 Aplicação no projeto: Perceber posição, concentração e variação em dados da escola.</div>
+  </div>
+  <div class="card roxo">
+    <h2>📘 Conteúdo principal</h2>
+    <div class="conceito-box"><strong>Conceito central:</strong> Quartis e percentis mostram a posição de um valor dentro de um conjunto de dados.</div>
+    <p>As medidas de posição relativa indicam onde um valor está dentro do conjunto. Quartis dividem os dados em quatro partes; percentis dividem em cem partes. O boxplot resume visualmente a distribuição, mostrando mínimo, máximo, mediana e quartis. O gráfico de dispersão ajuda a observar relação entre duas variáveis. No projeto, isso ajuda a comparar públicos e perceber padrões com mais precisão.</p>
+  </div>
+  <div class="caderno-section">
+    <h3>📝 Resumo para o Caderno — Medidas de Posição Relativa e Representações Gráficas</h3>
+    <ol>
+      <li>Medidas de posição relativa indicam a posição dos dados.</li>
+      <li>Quartis dividem o conjunto em quatro partes.</li>
+      <li>Percentis dividem o conjunto em cem partes.</li>
+      <li>Essas medidas mostram concentração e distribuição.</li>
+      <li>Boxplot resume visualmente a distribuição dos dados.</li>
+      <li>Ele destaca mediana, quartis e extremos.</li>
+      <li>Gráfico de dispersão compara duas variáveis.</li>
+      <li>No projeto, isso ajuda a ler grupos com mais detalhe.</li>
+      <li>Posição relativa amplia a análise além da média.</li>
+      <li>Ler posição e variação melhora a interpretação.</li>
+    </ol>
+  </div>
+  <div class="quiz-section">
+    <h2>🎮 Quiz — Quartis, Percentis e Boxplot</h2>
+    <p style="opacity:0.8;margin-bottom:16px">10 questões para testar seu conhecimento!</p>
+  
+<style>
+.quiz-panel{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 18px}
+.quiz-stat{background:#fff;color:#1F0A3C;border-radius:14px;padding:14px;text-align:center;box-shadow:0 6px 18px rgba(59,7,100,.12);border:1px solid #E9D5FF}
+.quiz-stat strong{display:block;font-size:1.3rem;margin-top:4px}
+.progress-wrap{background:#E5E7EB;border-radius:999px;height:14px;overflow:hidden;margin:14px 0}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#FF6B35,#A855F7)}
+.quiz-meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.quiz-pill{background:#fff;border:1px solid #E9D5FF;border-radius:999px;padding:8px 14px;color:#1F0A3C;font-weight:700}
+.quiz-question{background:#fff;border:2px solid #E9D5FF;border-radius:16px;padding:18px;margin:16px 0;color:#1F0A3C}
+.quiz-question h4{margin-bottom:12px;font-size:1rem}
+.quiz-option{display:block;margin:8px 0;padding:10px 12px;border-radius:12px;border:1px solid #D8B4FE;cursor:pointer;background:#FAF5FF;color:#1F0A3C;font-weight:600}
+.quiz-option input{margin-right:10px}
+.quiz-question.correct{border-color:#22C55E;background:#F0FDF4}
+.quiz-question.incorrect{border-color:#EF4444;background:#FEF2F2}
+.quiz-feedback{margin-top:10px;font-weight:700}
+.quiz-actions{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.quiz-btn{background:linear-gradient(90deg,#6B21A8,#FF6B35);color:#fff;border:none;border-radius:999px;padding:12px 22px;font-weight:700;cursor:pointer}
+.quiz-btn.secondary{background:#fff;color:#6B21A8;border:2px solid #6B21A8}
+@media(max-width:720px){.quiz-panel{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+    <div class="quiz-panel">
+      <div class="quiz-stat">Pontos<strong id="points">0</strong></div>
+      <div class="quiz-stat">Acertos<strong id="correct">0</strong></div>
+      <div class="quiz-stat">Respondidas<strong id="answered">0/10</strong></div>
+      <div class="quiz-stat">Nível<strong id="level">Iniciante</strong></div>
+    </div>
+    <div class="progress-wrap"><div class="progress-bar" id="progress"></div></div>
+    <div class="quiz-meta">
+      <div class="quiz-pill">💬 <span id="message">Responda as questões e acompanhe seu desempenho!</span></div>
+      <div class="quiz-pill">❌ Erros: <span id="errors">0</span></div>
+      <div class="quiz-pill">📌 Restantes: <span id="remaining">10</span></div>
+    </div>
+    <div class="quiz-question" id="q0" data-done="0"><h4>1. O que as medidas de posição relativa mostram?</h4><label class="quiz-option"><input type="radio" name="q0" value="0"> <strong>A.</strong> A posição de um valor no conjunto.</label><label class="quiz-option"><input type="radio" name="q0" value="1"> <strong>B.</strong> A autoria do formulário.</label><label class="quiz-option"><input type="radio" name="q0" value="2"> <strong>C.</strong> A cor do gráfico.</label><label class="quiz-option"><input type="radio" name="q0" value="3"> <strong>D.</strong> O nome da escola.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q1" data-done="0"><h4>2. Em quantas partes os quartis dividem os dados?</h4><label class="quiz-option"><input type="radio" name="q1" value="0"> <strong>A.</strong> Duas</label><label class="quiz-option"><input type="radio" name="q1" value="1"> <strong>B.</strong> Quatro</label><label class="quiz-option"><input type="radio" name="q1" value="2"> <strong>C.</strong> Dez</label><label class="quiz-option"><input type="radio" name="q1" value="3"> <strong>D.</strong> Cem</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q2" data-done="0"><h4>3. Em quantas partes os percentis dividem os dados?</h4><label class="quiz-option"><input type="radio" name="q2" value="0"> <strong>A.</strong> Quatro</label><label class="quiz-option"><input type="radio" name="q2" value="1"> <strong>B.</strong> Cinco</label><label class="quiz-option"><input type="radio" name="q2" value="2"> <strong>C.</strong> Cem</label><label class="quiz-option"><input type="radio" name="q2" value="3"> <strong>D.</strong> Duas</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q3" data-done="0"><h4>4. Qual gráfico resume mediana, quartis e extremos?</h4><label class="quiz-option"><input type="radio" name="q3" value="0"> <strong>A.</strong> Histograma</label><label class="quiz-option"><input type="radio" name="q3" value="1"> <strong>B.</strong> Gráfico de barras</label><label class="quiz-option"><input type="radio" name="q3" value="2"> <strong>C.</strong> Polígono de frequência</label><label class="quiz-option"><input type="radio" name="q3" value="3"> <strong>D.</strong> Boxplot</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q4" data-done="0"><h4>5. O gráfico de dispersão ajuda a observar:</h4><label class="quiz-option"><input type="radio" name="q4" value="0"> <strong>A.</strong> A relação entre duas variáveis.</label><label class="quiz-option"><input type="radio" name="q4" value="1"> <strong>B.</strong> Apenas a moda.</label><label class="quiz-option"><input type="radio" name="q4" value="2"> <strong>C.</strong> Só dados nominais.</label><label class="quiz-option"><input type="radio" name="q4" value="3"> <strong>D.</strong> A limpeza da base.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q5" data-done="0"><h4>6. No boxplot, a linha central costuma representar a:</h4><label class="quiz-option"><input type="radio" name="q5" value="0"> <strong>A.</strong> Média</label><label class="quiz-option"><input type="radio" name="q5" value="1"> <strong>B.</strong> Mediana</label><label class="quiz-option"><input type="radio" name="q5" value="2"> <strong>C.</strong> Moda</label><label class="quiz-option"><input type="radio" name="q5" value="3"> <strong>D.</strong> Amplitude</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q6" data-done="0"><h4>7. Um percentil 80 indica, em leitura simples, que o valor está:</h4><label class="quiz-option"><input type="radio" name="q6" value="0"> <strong>A.</strong> No começo da lista.</label><label class="quiz-option"><input type="radio" name="q6" value="1"> <strong>B.</strong> Fora do conjunto.</label><label class="quiz-option"><input type="radio" name="q6" value="2"> <strong>C.</strong> Acima de 80% dos dados aproximadamente.</label><label class="quiz-option"><input type="radio" name="q6" value="3"> <strong>D.</strong> Sempre igual à média.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q7" data-done="0"><h4>8. Por que quartis e percentis ajudam no projeto?</h4><label class="quiz-option"><input type="radio" name="q7" value="0"> <strong>A.</strong> Porque servem apenas para desenho.</label><label class="quiz-option"><input type="radio" name="q7" value="1"> <strong>B.</strong> Porque substituem toda a inferência.</label><label class="quiz-option"><input type="radio" name="q7" value="2"> <strong>C.</strong> Porque eliminam diferenças entre públicos.</label><label class="quiz-option"><input type="radio" name="q7" value="3"> <strong>D.</strong> Porque mostram posição e concentração dos dados.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q8" data-done="0"><h4>9. O boxplot é útil porque:</h4><label class="quiz-option"><input type="radio" name="q8" value="0"> <strong>A.</strong> Resume visualmente a distribuição.</label><label class="quiz-option"><input type="radio" name="q8" value="1"> <strong>B.</strong> Troca o tipo de dado.</label><label class="quiz-option"><input type="radio" name="q8" value="2"> <strong>C.</strong> Substitui a tabela de frequência.</label><label class="quiz-option"><input type="radio" name="q8" value="3"> <strong>D.</strong> Evita qualquer comparação.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q9" data-done="0"><h4>10. Quando duas variáveis são comparadas em pontos no plano, usamos:</h4><label class="quiz-option"><input type="radio" name="q9" value="0"> <strong>A.</strong> Tabela nominal</label><label class="quiz-option"><input type="radio" name="q9" value="1"> <strong>B.</strong> Gráfico de dispersão</label><label class="quiz-option"><input type="radio" name="q9" value="2"> <strong>C.</strong> Teste Z</label><label class="quiz-option"><input type="radio" name="q9" value="3"> <strong>D.</strong> Moda</label><div class="quiz-feedback"></div></div><p id="final" style="font-weight:800;color:#1F0A3C;margin-top:12px"></p><div class="quiz-actions"><button class="quiz-btn secondary" id="restartQuiz">🔄 Reiniciar quiz</button></div>
+<script>
+(function(){
+ const quizData = [{"prompt": "O que as medidas de posição relativa mostram?", "options": ["A posição de um valor no conjunto.", "A autoria do formulário.", "A cor do gráfico.", "O nome da escola."], "correct": 0}, {"prompt": "Em quantas partes os quartis dividem os dados?", "options": ["Duas", "Quatro", "Dez", "Cem"], "correct": 1}, {"prompt": "Em quantas partes os percentis dividem os dados?", "options": ["Quatro", "Cinco", "Cem", "Duas"], "correct": 2}, {"prompt": "Qual gráfico resume mediana, quartis e extremos?", "options": ["Histograma", "Gráfico de barras", "Polígono de frequência", "Boxplot"], "correct": 3}, {"prompt": "O gráfico de dispersão ajuda a observar:", "options": ["A relação entre duas variáveis.", "Apenas a moda.", "Só dados nominais.", "A limpeza da base."], "correct": 0}, {"prompt": "No boxplot, a linha central costuma representar a:", "options": ["Média", "Mediana", "Moda", "Amplitude"], "correct": 1}, {"prompt": "Um percentil 80 indica, em leitura simples, que o valor está:", "options": ["No começo da lista.", "Fora do conjunto.", "Acima de 80% dos dados aproximadamente.", "Sempre igual à média."], "correct": 2}, {"prompt": "Por que quartis e percentis ajudam no projeto?", "options": ["Porque servem apenas para desenho.", "Porque substituem toda a inferência.", "Porque eliminam diferenças entre públicos.", "Porque mostram posição e concentração dos dados."], "correct": 3}, {"prompt": "O boxplot é útil porque:", "options": ["Resume visualmente a distribuição.", "Troca o tipo de dado.", "Substitui a tabela de frequência.", "Evita qualquer comparação."], "correct": 0}, {"prompt": "Quando duas variáveis são comparadas em pontos no plano, usamos:", "options": ["Tabela nominal", "Gráfico de dispersão", "Teste Z", "Moda"], "correct": 1}];
+ let points=0, correctCount=0, answered=0, errors=0;
+ function levelFromPoints(p){ if(p>=90) return "Mestre"; if(p>=70) return "Avançado"; if(p>=40) return "Intermediário"; return "Iniciante"; }
+ function renderStats(){
+   document.getElementById('points').textContent = points;
+   document.getElementById('correct').textContent = correctCount;
+   document.getElementById('answered').textContent = answered + "/" + quizData.length;
+   document.getElementById('level').textContent = levelFromPoints(points);
+   document.getElementById('errors').textContent = errors;
+   document.getElementById('remaining').textContent = quizData.length - answered;
+   const percent = (answered/quizData.length)*100;
+   document.getElementById('progress').style.width = percent + '%';
+   let msg = "Você está começando muito bem!";
+   if (answered === 0) msg = "Responda as questões e acompanhe seu desempenho!";
+   else if (correctCount === quizData.length) msg = "Perfeito! Desempenho excelente!";
+   else if (correctCount/answered >= 0.8) msg = "Ótimo ritmo! Continue assim!";
+   else if (correctCount/answered >= 0.5) msg = "Bom caminho! Revise alguns pontos.";
+   else msg = "Vale revisar a aula e tentar novamente.";
+   document.getElementById('message').textContent = msg;
+   if(answered===quizData.length){
+      document.getElementById('final').textContent = `Quiz finalizado! Você fez ${points} pontos e acertou ${correctCount} de ${quizData.length}.`;
+   } else {
+      document.getElementById('final').textContent = '';
+   }
+ }
+ function bindQuiz(){
+   quizData.forEach((q, idx)=>{
+      const wrapper = document.getElementById('q'+idx);
+      wrapper.querySelectorAll('input').forEach((input)=>{
+          input.addEventListener('change', function(){
+             if(wrapper.dataset.done === '1') return;
+             wrapper.dataset.done = '1';
+             answered += 1;
+             const selected = Number(this.value);
+             const feedback = wrapper.querySelector('.quiz-feedback');
+             if(selected === q.correct){
+                points += 10;
+                correctCount += 1;
+                wrapper.classList.add('correct');
+                feedback.textContent = "✅ Resposta correta!";
+                feedback.style.color = "#166534";
+             }else{
+                errors += 1;
+                wrapper.classList.add('incorrect');
+                feedback.textContent = "❌ Resposta incorreta. Revise esse ponto da aula.";
+                feedback.style.color = "#991B1B";
+                wrapper.querySelectorAll('label')[q.correct].style.borderColor = "#22C55E";
+                wrapper.querySelectorAll('label')[q.correct].style.background = "#DCFCE7";
+             }
+             wrapper.querySelectorAll('input').forEach(i=>i.disabled=true);
+             renderStats();
+          });
+      });
+   });
+   document.getElementById('restartQuiz').addEventListener('click', function(){
+      points=0; correctCount=0; answered=0; errors=0;
+      document.querySelectorAll('.quiz-question').forEach((wrapper, idx)=>{
+         wrapper.dataset.done='0';
+         wrapper.classList.remove('correct','incorrect');
+         wrapper.querySelector('.quiz-feedback').textContent='';
+         wrapper.querySelectorAll('label').forEach(l=>{
+            l.style.borderColor = '#D8B4FE'; l.style.background = '#FAF5FF';
+         });
+         wrapper.querySelectorAll('input').forEach(i=>{i.disabled=false; i.checked=false;});
+      });
+      renderStats();
+      window.scrollTo({top: document.querySelector('.quiz-section').offsetTop - 20, behavior:'smooth'});
+   });
+   renderStats();
+ }
+ document.addEventListener('DOMContentLoaded', bindQuiz);
+})();
+</script>
+
+</div>
+</div>
+</body>
+</html>

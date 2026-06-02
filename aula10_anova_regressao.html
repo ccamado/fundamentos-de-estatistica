@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundamentos de Estatística — ANOVA e Regressão</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="index.html" class="btn-back">← Voltar ao Menu</a>
+<div class="aula-container">
+  <div class="aula-hero">
+    <div class="aula-num">AULA 10 • EM BREVE</div>
+    <h1>🔗 ANOVA e Regressão</h1>
+    <div class="aula-meta">
+      <span>📅 08/07/2026</span>
+      <span>⏱ 4 aulas de 50 minutos</span>
+      <span>🎯 Escola que Queremos</span>
+      <span>📚 Fundamentos de Estatística · 1º Ano A</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🎯 O que vamos aprender?</h2>
+    <p>Hoje vamos observar como a Estatística pode comparar grupos e pensar relações entre variáveis. É uma aula conceitual para ampliar a leitura dos dados do projeto.</p>
+    <div class="destaque">💡 Aplicação no projeto: Perceber comparações entre grupos e possíveis relações entre variáveis ligadas aos dados escolares.</div>
+  </div>
+  <div class="card roxo">
+    <h2>📘 Conteúdo principal</h2>
+    <div class="conceito-box"><strong>Conceito central:</strong> ANOVA compara grupos; regressão analisa relações entre variáveis.</div>
+    <p>A análise de variância, conhecida como ANOVA, ajuda a comparar conjuntos ou grupos. A regressão linear simples observa relação entre duas variáveis, e a regressão linear múltipla envolve mais de uma variável explicativa. No projeto, esse bloco amplia a capacidade de comparar públicos e pensar conexões entre aspectos da realidade escolar.</p>
+  </div>
+  <div class="caderno-section">
+    <h3>📝 Resumo para o Caderno — ANOVA e Regressão</h3>
+    <ol>
+      <li>ANOVA é análise de variância.</li>
+      <li>Ela ajuda a comparar grupos.</li>
+      <li>Regressão estuda relação entre variáveis.</li>
+      <li>Regressão simples envolve duas variáveis principais.</li>
+      <li>Regressão múltipla envolve mais variáveis explicativas.</li>
+      <li>Comparar grupos é importante na leitura escolar.</li>
+      <li>Relacionar variáveis ajuda a enxergar padrões.</li>
+      <li>Essas técnicas ampliam a análise inferencial.</li>
+      <li>No projeto, elas fortalecem comparações entre públicos.</li>
+      <li>Estatística também ajuda a pensar relações, não só contagens.</li>
+    </ol>
+  </div>
+  <div class="quiz-section">
+    <h2>🎮 Quiz — ANOVA e Regressão</h2>
+    <p style="opacity:0.8;margin-bottom:16px">10 questões para testar seu conhecimento!</p>
+  
+<style>
+.quiz-panel{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 18px}
+.quiz-stat{background:#fff;color:#1F0A3C;border-radius:14px;padding:14px;text-align:center;box-shadow:0 6px 18px rgba(59,7,100,.12);border:1px solid #E9D5FF}
+.quiz-stat strong{display:block;font-size:1.3rem;margin-top:4px}
+.progress-wrap{background:#E5E7EB;border-radius:999px;height:14px;overflow:hidden;margin:14px 0}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#FF6B35,#A855F7)}
+.quiz-meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.quiz-pill{background:#fff;border:1px solid #E9D5FF;border-radius:999px;padding:8px 14px;color:#1F0A3C;font-weight:700}
+.quiz-question{background:#fff;border:2px solid #E9D5FF;border-radius:16px;padding:18px;margin:16px 0;color:#1F0A3C}
+.quiz-question h4{margin-bottom:12px;font-size:1rem}
+.quiz-option{display:block;margin:8px 0;padding:10px 12px;border-radius:12px;border:1px solid #D8B4FE;cursor:pointer;background:#FAF5FF;color:#1F0A3C;font-weight:600}
+.quiz-option input{margin-right:10px}
+.quiz-question.correct{border-color:#22C55E;background:#F0FDF4}
+.quiz-question.incorrect{border-color:#EF4444;background:#FEF2F2}
+.quiz-feedback{margin-top:10px;font-weight:700}
+.quiz-actions{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.quiz-btn{background:linear-gradient(90deg,#6B21A8,#FF6B35);color:#fff;border:none;border-radius:999px;padding:12px 22px;font-weight:700;cursor:pointer}
+.quiz-btn.secondary{background:#fff;color:#6B21A8;border:2px solid #6B21A8}
+@media(max-width:720px){.quiz-panel{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+    <div class="quiz-panel">
+      <div class="quiz-stat">Pontos<strong id="points">0</strong></div>
+      <div class="quiz-stat">Acertos<strong id="correct">0</strong></div>
+      <div class="quiz-stat">Respondidas<strong id="answered">0/10</strong></div>
+      <div class="quiz-stat">Nível<strong id="level">Iniciante</strong></div>
+    </div>
+    <div class="progress-wrap"><div class="progress-bar" id="progress"></div></div>
+    <div class="quiz-meta">
+      <div class="quiz-pill">💬 <span id="message">Responda as questões e acompanhe seu desempenho!</span></div>
+      <div class="quiz-pill">❌ Erros: <span id="errors">0</span></div>
+      <div class="quiz-pill">📌 Restantes: <span id="remaining">10</span></div>
+    </div>
+    <div class="quiz-question" id="q0" data-done="0"><h4>1. ANOVA significa:</h4><label class="quiz-option"><input type="radio" name="q0" value="0"> <strong>A.</strong> Análise de variância.</label><label class="quiz-option"><input type="radio" name="q0" value="1"> <strong>B.</strong> Amostra nominal ordenada válida.</label><label class="quiz-option"><input type="radio" name="q0" value="2"> <strong>C.</strong> Aplicação numérica objetiva visual.</label><label class="quiz-option"><input type="radio" name="q0" value="3"> <strong>D.</strong> Avaliação normal organizada variável.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q1" data-done="0"><h4>2. A principal função da ANOVA é:</h4><label class="quiz-option"><input type="radio" name="q1" value="0"> <strong>A.</strong> Calcular a moda.</label><label class="quiz-option"><input type="radio" name="q1" value="1"> <strong>B.</strong> Comparar grupos.</label><label class="quiz-option"><input type="radio" name="q1" value="2"> <strong>C.</strong> Contar frequências.</label><label class="quiz-option"><input type="radio" name="q1" value="3"> <strong>D.</strong> Descrever categorias textuais.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q2" data-done="0"><h4>3. Regressão linear simples observa relação entre:</h4><label class="quiz-option"><input type="radio" name="q2" value="0"> <strong>A.</strong> Somente três variáveis.</label><label class="quiz-option"><input type="radio" name="q2" value="1"> <strong>B.</strong> Uma tabela e um gráfico.</label><label class="quiz-option"><input type="radio" name="q2" value="2"> <strong>C.</strong> Duas variáveis principais.</label><label class="quiz-option"><input type="radio" name="q2" value="3"> <strong>D.</strong> A moda e a mediana.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q3" data-done="0"><h4>4. Regressão linear múltipla envolve:</h4><label class="quiz-option"><input type="radio" name="q3" value="0"> <strong>A.</strong> Apenas uma variável explicativa.</label><label class="quiz-option"><input type="radio" name="q3" value="1"> <strong>B.</strong> Nenhuma comparação.</label><label class="quiz-option"><input type="radio" name="q3" value="2"> <strong>C.</strong> Somente frequência relativa.</label><label class="quiz-option"><input type="radio" name="q3" value="3"> <strong>D.</strong> Mais de uma variável explicativa.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q4" data-done="0"><h4>5. No projeto, ANOVA e regressão ajudam a:</h4><label class="quiz-option"><input type="radio" name="q4" value="0"> <strong>A.</strong> Comparar públicos e pensar relações entre variáveis.</label><label class="quiz-option"><input type="radio" name="q4" value="1"> <strong>B.</strong> Substituir a coleta de dados.</label><label class="quiz-option"><input type="radio" name="q4" value="2"> <strong>C.</strong> Escrever o diário de bordo.</label><label class="quiz-option"><input type="radio" name="q4" value="3"> <strong>D.</strong> Definir ética na pesquisa.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q5" data-done="0"><h4>6. Quando queremos comparar conjuntos, um conceito importante é:</h4><label class="quiz-option"><input type="radio" name="q5" value="0"> <strong>A.</strong> Amplitude apenas</label><label class="quiz-option"><input type="radio" name="q5" value="1"> <strong>B.</strong> ANOVA</label><label class="quiz-option"><input type="radio" name="q5" value="2"> <strong>C.</strong> Moda</label><label class="quiz-option"><input type="radio" name="q5" value="3"> <strong>D.</strong> Ordem nominal</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q6" data-done="0"><h4>7. Quando buscamos relação entre uma variável e outra, pensamos em:</h4><label class="quiz-option"><input type="radio" name="q6" value="0"> <strong>A.</strong> Boxplot</label><label class="quiz-option"><input type="radio" name="q6" value="1"> <strong>B.</strong> Revisão textual</label><label class="quiz-option"><input type="radio" name="q6" value="2"> <strong>C.</strong> Regressão</label><label class="quiz-option"><input type="radio" name="q6" value="3"> <strong>D.</strong> Frequência absoluta</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q7" data-done="0"><h4>8. Essas técnicas ampliam a análise:</h4><label class="quiz-option"><input type="radio" name="q7" value="0"> <strong>A.</strong> Descritiva apenas</label><label class="quiz-option"><input type="radio" name="q7" value="1"> <strong>B.</strong> Apenas metodológica</label><label class="quiz-option"><input type="radio" name="q7" value="2"> <strong>C.</strong> Somente comunicacional</label><label class="quiz-option"><input type="radio" name="q7" value="3"> <strong>D.</strong> Inferencial e relacional</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q8" data-done="0"><h4>9. Regressão não serve para:</h4><label class="quiz-option"><input type="radio" name="q8" value="0"> <strong>A.</strong> Limpar base de dados</label><label class="quiz-option"><input type="radio" name="q8" value="1"> <strong>B.</strong> Estudar tendência de relação</label><label class="quiz-option"><input type="radio" name="q8" value="2"> <strong>C.</strong> Apoiar interpretação</label><label class="quiz-option"><input type="radio" name="q8" value="3"> <strong>D.</strong> Pensar relação entre variáveis</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q9" data-done="0"><h4>10. No contexto escolar, comparar grupos diferentes é importante porque:</h4><label class="quiz-option"><input type="radio" name="q9" value="0"> <strong>A.</strong> Dispensa todas as outras medidas.</label><label class="quiz-option"><input type="radio" name="q9" value="1"> <strong>B.</strong> Ajuda a entender melhor a realidade da escola.</label><label class="quiz-option"><input type="radio" name="q9" value="2"> <strong>C.</strong> Evita qualquer interpretação.</label><label class="quiz-option"><input type="radio" name="q9" value="3"> <strong>D.</strong> Serve só para teoria.</label><div class="quiz-feedback"></div></div><p id="final" style="font-weight:800;color:#1F0A3C;margin-top:12px"></p><div class="quiz-actions"><button class="quiz-btn secondary" id="restartQuiz">🔄 Reiniciar quiz</button></div>
+<script>
+(function(){
+ const quizData = [{"prompt": "ANOVA significa:", "options": ["Análise de variância.", "Amostra nominal ordenada válida.", "Aplicação numérica objetiva visual.", "Avaliação normal organizada variável."], "correct": 0}, {"prompt": "A principal função da ANOVA é:", "options": ["Calcular a moda.", "Comparar grupos.", "Contar frequências.", "Descrever categorias textuais."], "correct": 1}, {"prompt": "Regressão linear simples observa relação entre:", "options": ["Somente três variáveis.", "Uma tabela e um gráfico.", "Duas variáveis principais.", "A moda e a mediana."], "correct": 2}, {"prompt": "Regressão linear múltipla envolve:", "options": ["Apenas uma variável explicativa.", "Nenhuma comparação.", "Somente frequência relativa.", "Mais de uma variável explicativa."], "correct": 3}, {"prompt": "No projeto, ANOVA e regressão ajudam a:", "options": ["Comparar públicos e pensar relações entre variáveis.", "Substituir a coleta de dados.", "Escrever o diário de bordo.", "Definir ética na pesquisa."], "correct": 0}, {"prompt": "Quando queremos comparar conjuntos, um conceito importante é:", "options": ["Amplitude apenas", "ANOVA", "Moda", "Ordem nominal"], "correct": 1}, {"prompt": "Quando buscamos relação entre uma variável e outra, pensamos em:", "options": ["Boxplot", "Revisão textual", "Regressão", "Frequência absoluta"], "correct": 2}, {"prompt": "Essas técnicas ampliam a análise:", "options": ["Descritiva apenas", "Apenas metodológica", "Somente comunicacional", "Inferencial e relacional"], "correct": 3}, {"prompt": "Regressão não serve para:", "options": ["Limpar base de dados", "Estudar tendência de relação", "Apoiar interpretação", "Pensar relação entre variáveis"], "correct": 0}, {"prompt": "No contexto escolar, comparar grupos diferentes é importante porque:", "options": ["Dispensa todas as outras medidas.", "Ajuda a entender melhor a realidade da escola.", "Evita qualquer interpretação.", "Serve só para teoria."], "correct": 1}];
+ let points=0, correctCount=0, answered=0, errors=0;
+ function levelFromPoints(p){ if(p>=90) return "Mestre"; if(p>=70) return "Avançado"; if(p>=40) return "Intermediário"; return "Iniciante"; }
+ function renderStats(){
+   document.getElementById('points').textContent = points;
+   document.getElementById('correct').textContent = correctCount;
+   document.getElementById('answered').textContent = answered + "/" + quizData.length;
+   document.getElementById('level').textContent = levelFromPoints(points);
+   document.getElementById('errors').textContent = errors;
+   document.getElementById('remaining').textContent = quizData.length - answered;
+   const percent = (answered/quizData.length)*100;
+   document.getElementById('progress').style.width = percent + '%';
+   let msg = "Você está começando muito bem!";
+   if (answered === 0) msg = "Responda as questões e acompanhe seu desempenho!";
+   else if (correctCount === quizData.length) msg = "Perfeito! Desempenho excelente!";
+   else if (correctCount/answered >= 0.8) msg = "Ótimo ritmo! Continue assim!";
+   else if (correctCount/answered >= 0.5) msg = "Bom caminho! Revise alguns pontos.";
+   else msg = "Vale revisar a aula e tentar novamente.";
+   document.getElementById('message').textContent = msg;
+   if(answered===quizData.length){
+      document.getElementById('final').textContent = `Quiz finalizado! Você fez ${points} pontos e acertou ${correctCount} de ${quizData.length}.`;
+   } else {
+      document.getElementById('final').textContent = '';
+   }
+ }
+ function bindQuiz(){
+   quizData.forEach((q, idx)=>{
+      const wrapper = document.getElementById('q'+idx);
+      wrapper.querySelectorAll('input').forEach((input)=>{
+          input.addEventListener('change', function(){
+             if(wrapper.dataset.done === '1') return;
+             wrapper.dataset.done = '1';
+             answered += 1;
+             const selected = Number(this.value);
+             const feedback = wrapper.querySelector('.quiz-feedback');
+             if(selected === q.correct){
+                points += 10;
+                correctCount += 1;
+                wrapper.classList.add('correct');
+                feedback.textContent = "✅ Resposta correta!";
+                feedback.style.color = "#166534";
+             }else{
+                errors += 1;
+                wrapper.classList.add('incorrect');
+                feedback.textContent = "❌ Resposta incorreta. Revise esse ponto da aula.";
+                feedback.style.color = "#991B1B";
+                wrapper.querySelectorAll('label')[q.correct].style.borderColor = "#22C55E";
+                wrapper.querySelectorAll('label')[q.correct].style.background = "#DCFCE7";
+             }
+             wrapper.querySelectorAll('input').forEach(i=>i.disabled=true);
+             renderStats();
+          });
+      });
+   });
+   document.getElementById('restartQuiz').addEventListener('click', function(){
+      points=0; correctCount=0; answered=0; errors=0;
+      document.querySelectorAll('.quiz-question').forEach((wrapper, idx)=>{
+         wrapper.dataset.done='0';
+         wrapper.classList.remove('correct','incorrect');
+         wrapper.querySelector('.quiz-feedback').textContent='';
+         wrapper.querySelectorAll('label').forEach(l=>{
+            l.style.borderColor = '#D8B4FE'; l.style.background = '#FAF5FF';
+         });
+         wrapper.querySelectorAll('input').forEach(i=>{i.disabled=false; i.checked=false;});
+      });
+      renderStats();
+      window.scrollTo({top: document.querySelector('.quiz-section').offsetTop - 20, behavior:'smooth'});
+   });
+   renderStats();
+ }
+ document.addEventListener('DOMContentLoaded', bindQuiz);
+})();
+</script>
+
+</div>
+</div>
+</body>
+</html>

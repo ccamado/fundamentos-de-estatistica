@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundamentos de Estatística — Medidas de Dispersão</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="index.html" class="btn-back">← Voltar ao Menu</a>
+<div class="aula-container">
+  <div class="aula-hero">
+    <div class="aula-num">AULA 2 • REVISÃO</div>
+    <h1>📏 Medidas de Dispersão</h1>
+    <div class="aula-meta">
+      <span>📅 13/05/2026</span>
+      <span>⏱ 4 aulas de 50 minutos</span>
+      <span>🎯 Escola que Queremos</span>
+      <span>📚 Fundamentos de Estatística · 1º Ano A</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🎯 O que vamos aprender?</h2>
+    <p>Nesta aula, vamos olhar para a variação dos dados. Não basta saber o centro de um conjunto: também precisamos entender se os resultados estão mais próximos ou mais espalhados.</p>
+    <div class="destaque">💡 Aplicação no projeto: Mostrar que não basta saber o valor central; também é preciso ver a variação entre grupos, respostas e conjuntos do projeto.</div>
+  </div>
+  <div class="card roxo">
+    <h2>📘 Conteúdo principal</h2>
+    <div class="conceito-box"><strong>Conceito central:</strong> As medidas de dispersão mostram o quanto os dados variam em torno do centro.</div>
+    <p>A amplitude compara o menor e o maior valor. A variância e o desvio padrão mostram o espalhamento dos dados em relação à média. O coeficiente de variação ajuda a comparar conjuntos diferentes. No projeto, essas medidas ajudam a perceber se os grupos da escola tiveram resultados parecidos ou muito diferentes.</p>
+  </div>
+  <div class="caderno-section">
+    <h3>📝 Resumo para o Caderno — Medidas de Dispersão</h3>
+    <ol>
+      <li>Medidas de dispersão mostram a variação dos dados.</li>
+      <li>Amplitude é a diferença entre o maior e o menor valor.</li>
+      <li>Variância mede o espalhamento em relação à média.</li>
+      <li>Desvio padrão é a raiz da variância.</li>
+      <li>Coeficiente de variação ajuda a comparar conjuntos.</li>
+      <li>Dados mais próximos têm menor dispersão.</li>
+      <li>Dados mais espalhados têm maior dispersão.</li>
+      <li>No projeto, isso ajuda a comparar grupos da escola.</li>
+      <li>A dispersão evita leituras apressadas da média.</li>
+      <li>Centro e variação devem ser lidos juntos.</li>
+    </ol>
+  </div>
+  <div class="quiz-section">
+    <h2>🎮 Quiz — Dispersão dos Dados</h2>
+    <p style="opacity:0.8;margin-bottom:16px">10 questões para testar seu conhecimento!</p>
+  
+<style>
+.quiz-panel{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 18px}
+.quiz-stat{background:#fff;color:#1F0A3C;border-radius:14px;padding:14px;text-align:center;box-shadow:0 6px 18px rgba(59,7,100,.12);border:1px solid #E9D5FF}
+.quiz-stat strong{display:block;font-size:1.3rem;margin-top:4px}
+.progress-wrap{background:#E5E7EB;border-radius:999px;height:14px;overflow:hidden;margin:14px 0}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#FF6B35,#A855F7)}
+.quiz-meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.quiz-pill{background:#fff;border:1px solid #E9D5FF;border-radius:999px;padding:8px 14px;color:#1F0A3C;font-weight:700}
+.quiz-question{background:#fff;border:2px solid #E9D5FF;border-radius:16px;padding:18px;margin:16px 0;color:#1F0A3C}
+.quiz-question h4{margin-bottom:12px;font-size:1rem}
+.quiz-option{display:block;margin:8px 0;padding:10px 12px;border-radius:12px;border:1px solid #D8B4FE;cursor:pointer;background:#FAF5FF;color:#1F0A3C;font-weight:600}
+.quiz-option input{margin-right:10px}
+.quiz-question.correct{border-color:#22C55E;background:#F0FDF4}
+.quiz-question.incorrect{border-color:#EF4444;background:#FEF2F2}
+.quiz-feedback{margin-top:10px;font-weight:700}
+.quiz-actions{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.quiz-btn{background:linear-gradient(90deg,#6B21A8,#FF6B35);color:#fff;border:none;border-radius:999px;padding:12px 22px;font-weight:700;cursor:pointer}
+.quiz-btn.secondary{background:#fff;color:#6B21A8;border:2px solid #6B21A8}
+@media(max-width:720px){.quiz-panel{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+    <div class="quiz-panel">
+      <div class="quiz-stat">Pontos<strong id="points">0</strong></div>
+      <div class="quiz-stat">Acertos<strong id="correct">0</strong></div>
+      <div class="quiz-stat">Respondidas<strong id="answered">0/10</strong></div>
+      <div class="quiz-stat">Nível<strong id="level">Iniciante</strong></div>
+    </div>
+    <div class="progress-wrap"><div class="progress-bar" id="progress"></div></div>
+    <div class="quiz-meta">
+      <div class="quiz-pill">💬 <span id="message">Responda as questões e acompanhe seu desempenho!</span></div>
+      <div class="quiz-pill">❌ Erros: <span id="errors">0</span></div>
+      <div class="quiz-pill">📌 Restantes: <span id="remaining">10</span></div>
+    </div>
+    <div class="quiz-question" id="q0" data-done="0"><h4>1. O que as medidas de dispersão mostram?</h4><label class="quiz-option"><input type="radio" name="q0" value="0"> <strong>A.</strong> A variação dos dados.</label><label class="quiz-option"><input type="radio" name="q0" value="1"> <strong>B.</strong> A autoria do questionário.</label><label class="quiz-option"><input type="radio" name="q0" value="2"> <strong>C.</strong> O nome dos públicos pesquisados.</label><label class="quiz-option"><input type="radio" name="q0" value="3"> <strong>D.</strong> A ordem das aulas.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q1" data-done="0"><h4>2. O que é amplitude?</h4><label class="quiz-option"><input type="radio" name="q1" value="0"> <strong>A.</strong> A soma dos valores.</label><label class="quiz-option"><input type="radio" name="q1" value="1"> <strong>B.</strong> A diferença entre o maior e o menor valor.</label><label class="quiz-option"><input type="radio" name="q1" value="2"> <strong>C.</strong> O valor mais frequente.</label><label class="quiz-option"><input type="radio" name="q1" value="3"> <strong>D.</strong> O valor do meio.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q2" data-done="0"><h4>3. Qual medida é a raiz quadrada da variância?</h4><label class="quiz-option"><input type="radio" name="q2" value="0"> <strong>A.</strong> Média</label><label class="quiz-option"><input type="radio" name="q2" value="1"> <strong>B.</strong> Moda</label><label class="quiz-option"><input type="radio" name="q2" value="2"> <strong>C.</strong> Desvio padrão</label><label class="quiz-option"><input type="radio" name="q2" value="3"> <strong>D.</strong> Quartil</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q3" data-done="0"><h4>4. O coeficiente de variação serve para:</h4><label class="quiz-option"><input type="radio" name="q3" value="0"> <strong>A.</strong> Criar novas perguntas.</label><label class="quiz-option"><input type="radio" name="q3" value="1"> <strong>B.</strong> Substituir a mediana.</label><label class="quiz-option"><input type="radio" name="q3" value="2"> <strong>C.</strong> Montar histogramas.</label><label class="quiz-option"><input type="radio" name="q3" value="3"> <strong>D.</strong> Comparar variabilidade entre conjuntos.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q4" data-done="0"><h4>5. Se os dados ficam muito próximos entre si, a dispersão tende a ser:</h4><label class="quiz-option"><input type="radio" name="q4" value="0"> <strong>A.</strong> Menor</label><label class="quiz-option"><input type="radio" name="q4" value="1"> <strong>B.</strong> Maior</label><label class="quiz-option"><input type="radio" name="q4" value="2"> <strong>C.</strong> Inexistente</label><label class="quiz-option"><input type="radio" name="q4" value="3"> <strong>D.</strong> Igual à moda</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q5" data-done="0"><h4>6. Qual medida olha diretamente para os extremos?</h4><label class="quiz-option"><input type="radio" name="q5" value="0"> <strong>A.</strong> Mediana</label><label class="quiz-option"><input type="radio" name="q5" value="1"> <strong>B.</strong> Amplitude</label><label class="quiz-option"><input type="radio" name="q5" value="2"> <strong>C.</strong> Percentil</label><label class="quiz-option"><input type="radio" name="q5" value="3"> <strong>D.</strong> Teste t</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q6" data-done="0"><h4>7. A variância é calculada com base em:</h4><label class="quiz-option"><input type="radio" name="q6" value="0"> <strong>A.</strong> Apenas no maior valor.</label><label class="quiz-option"><input type="radio" name="q6" value="1"> <strong>B.</strong> Apenas no menor valor.</label><label class="quiz-option"><input type="radio" name="q6" value="2"> <strong>C.</strong> Nos afastamentos em relação à média.</label><label class="quiz-option"><input type="radio" name="q6" value="3"> <strong>D.</strong> No número de gráficos produzidos.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q7" data-done="0"><h4>8. No projeto escolar, a dispersão ajuda a perceber:</h4><label class="quiz-option"><input type="radio" name="q7" value="0"> <strong>A.</strong> Se a base foi limpa.</label><label class="quiz-option"><input type="radio" name="q7" value="1"> <strong>B.</strong> Se o texto final está pronto.</label><label class="quiz-option"><input type="radio" name="q7" value="2"> <strong>C.</strong> Qual professor aplicou a pesquisa.</label><label class="quiz-option"><input type="radio" name="q7" value="3"> <strong>D.</strong> Se os grupos tiveram resultados parecidos ou diferentes.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q8" data-done="0"><h4>9. Quando há um valor muito distante dos demais, ele pode aumentar a:</h4><label class="quiz-option"><input type="radio" name="q8" value="0"> <strong>A.</strong> Dispersão</label><label class="quiz-option"><input type="radio" name="q8" value="1"> <strong>B.</strong> Frequência relativa</label><label class="quiz-option"><input type="radio" name="q8" value="2"> <strong>C.</strong> Moda</label><label class="quiz-option"><input type="radio" name="q8" value="3"> <strong>D.</strong> Contagem de alunos</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q9" data-done="0"><h4>10. Por que ler a dispersão é importante?</h4><label class="quiz-option"><input type="radio" name="q9" value="0"> <strong>A.</strong> Porque evita analisar só o valor central.</label><label class="quiz-option"><input type="radio" name="q9" value="1"> <strong>B.</strong> Porque elimina a necessidade de tabelas.</label><label class="quiz-option"><input type="radio" name="q9" value="2"> <strong>C.</strong> Porque substitui o projeto.</label><label class="quiz-option"><input type="radio" name="q9" value="3"> <strong>D.</strong> Porque faz a coleta automaticamente.</label><div class="quiz-feedback"></div></div><p id="final" style="font-weight:800;color:#1F0A3C;margin-top:12px"></p><div class="quiz-actions"><button class="quiz-btn secondary" id="restartQuiz">🔄 Reiniciar quiz</button></div>
+<script>
+(function(){
+ const quizData = [{"prompt": "O que as medidas de dispersão mostram?", "options": ["A variação dos dados.", "A autoria do questionário.", "O nome dos públicos pesquisados.", "A ordem das aulas."], "correct": 0}, {"prompt": "O que é amplitude?", "options": ["A soma dos valores.", "A diferença entre o maior e o menor valor.", "O valor mais frequente.", "O valor do meio."], "correct": 1}, {"prompt": "Qual medida é a raiz quadrada da variância?", "options": ["Média", "Moda", "Desvio padrão", "Quartil"], "correct": 2}, {"prompt": "O coeficiente de variação serve para:", "options": ["Criar novas perguntas.", "Substituir a mediana.", "Montar histogramas.", "Comparar variabilidade entre conjuntos."], "correct": 3}, {"prompt": "Se os dados ficam muito próximos entre si, a dispersão tende a ser:", "options": ["Menor", "Maior", "Inexistente", "Igual à moda"], "correct": 0}, {"prompt": "Qual medida olha diretamente para os extremos?", "options": ["Mediana", "Amplitude", "Percentil", "Teste t"], "correct": 1}, {"prompt": "A variância é calculada com base em:", "options": ["Apenas no maior valor.", "Apenas no menor valor.", "Nos afastamentos em relação à média.", "No número de gráficos produzidos."], "correct": 2}, {"prompt": "No projeto escolar, a dispersão ajuda a perceber:", "options": ["Se a base foi limpa.", "Se o texto final está pronto.", "Qual professor aplicou a pesquisa.", "Se os grupos tiveram resultados parecidos ou diferentes."], "correct": 3}, {"prompt": "Quando há um valor muito distante dos demais, ele pode aumentar a:", "options": ["Dispersão", "Frequência relativa", "Moda", "Contagem de alunos"], "correct": 0}, {"prompt": "Por que ler a dispersão é importante?", "options": ["Porque evita analisar só o valor central.", "Porque elimina a necessidade de tabelas.", "Porque substitui o projeto.", "Porque faz a coleta automaticamente."], "correct": 1}];
+ let points=0, correctCount=0, answered=0, errors=0;
+ function levelFromPoints(p){ if(p>=90) return "Mestre"; if(p>=70) return "Avançado"; if(p>=40) return "Intermediário"; return "Iniciante"; }
+ function renderStats(){
+   document.getElementById('points').textContent = points;
+   document.getElementById('correct').textContent = correctCount;
+   document.getElementById('answered').textContent = answered + "/" + quizData.length;
+   document.getElementById('level').textContent = levelFromPoints(points);
+   document.getElementById('errors').textContent = errors;
+   document.getElementById('remaining').textContent = quizData.length - answered;
+   const percent = (answered/quizData.length)*100;
+   document.getElementById('progress').style.width = percent + '%';
+   let msg = "Você está começando muito bem!";
+   if (answered === 0) msg = "Responda as questões e acompanhe seu desempenho!";
+   else if (correctCount === quizData.length) msg = "Perfeito! Desempenho excelente!";
+   else if (correctCount/answered >= 0.8) msg = "Ótimo ritmo! Continue assim!";
+   else if (correctCount/answered >= 0.5) msg = "Bom caminho! Revise alguns pontos.";
+   else msg = "Vale revisar a aula e tentar novamente.";
+   document.getElementById('message').textContent = msg;
+   if(answered===quizData.length){
+      document.getElementById('final').textContent = `Quiz finalizado! Você fez ${points} pontos e acertou ${correctCount} de ${quizData.length}.`;
+   } else {
+      document.getElementById('final').textContent = '';
+   }
+ }
+ function bindQuiz(){
+   quizData.forEach((q, idx)=>{
+      const wrapper = document.getElementById('q'+idx);
+      wrapper.querySelectorAll('input').forEach((input)=>{
+          input.addEventListener('change', function(){
+             if(wrapper.dataset.done === '1') return;
+             wrapper.dataset.done = '1';
+             answered += 1;
+             const selected = Number(this.value);
+             const feedback = wrapper.querySelector('.quiz-feedback');
+             if(selected === q.correct){
+                points += 10;
+                correctCount += 1;
+                wrapper.classList.add('correct');
+                feedback.textContent = "✅ Resposta correta!";
+                feedback.style.color = "#166534";
+             }else{
+                errors += 1;
+                wrapper.classList.add('incorrect');
+                feedback.textContent = "❌ Resposta incorreta. Revise esse ponto da aula.";
+                feedback.style.color = "#991B1B";
+                wrapper.querySelectorAll('label')[q.correct].style.borderColor = "#22C55E";
+                wrapper.querySelectorAll('label')[q.correct].style.background = "#DCFCE7";
+             }
+             wrapper.querySelectorAll('input').forEach(i=>i.disabled=true);
+             renderStats();
+          });
+      });
+   });
+   document.getElementById('restartQuiz').addEventListener('click', function(){
+      points=0; correctCount=0; answered=0; errors=0;
+      document.querySelectorAll('.quiz-question').forEach((wrapper, idx)=>{
+         wrapper.dataset.done='0';
+         wrapper.classList.remove('correct','incorrect');
+         wrapper.querySelector('.quiz-feedback').textContent='';
+         wrapper.querySelectorAll('label').forEach(l=>{
+            l.style.borderColor = '#D8B4FE'; l.style.background = '#FAF5FF';
+         });
+         wrapper.querySelectorAll('input').forEach(i=>{i.disabled=false; i.checked=false;});
+      });
+      renderStats();
+      window.scrollTo({top: document.querySelector('.quiz-section').offsetTop - 20, behavior:'smooth'});
+   });
+   renderStats();
+ }
+ document.addEventListener('DOMContentLoaded', bindQuiz);
+})();
+</script>
+
+</div>
+</div>
+</body>
+</html>

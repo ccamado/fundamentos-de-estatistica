@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundamentos de Estatística — Probabilidade e Distribuições Discretas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="index.html" class="btn-back">← Voltar ao Menu</a>
+<div class="aula-container">
+  <div class="aula-hero">
+    <div class="aula-num">AULA 6 • EM BREVE</div>
+    <h1>🎲 Probabilidade e Distribuições Discretas</h1>
+    <div class="aula-meta">
+      <span>📅 10/06/2026</span>
+      <span>⏱ 4 aulas de 50 minutos</span>
+      <span>🎯 Escola que Queremos</span>
+      <span>📚 Fundamentos de Estatística · 1º Ano A</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🎯 O que vamos aprender?</h2>
+    <p>Agora vamos entrar no campo da probabilidade. A ideia é entender chance, ocorrência e previsão simples em situações que podem aparecer no cotidiano escolar e no projeto.</p>
+    <div class="destaque">💡 Aplicação no projeto: Introduzir a ideia de chance, ocorrência e previsão simples em situações ligadas à realidade escolar.</div>
+  </div>
+  <div class="card roxo">
+    <h2>📘 Conteúdo principal</h2>
+    <div class="conceito-box"><strong>Conceito central:</strong> Probabilidade mede a chance de um evento acontecer.</div>
+    <p>A probabilidade ajuda a pensar possibilidades e padrões de ocorrência. A distribuição binomial trabalha com situações de sucesso e fracasso em várias tentativas. A geométrica observa quantas tentativas são necessárias até o primeiro sucesso. A Poisson modela ocorrências em certo intervalo. No projeto, isso amplia a leitura de padrões em dados da escola.</p>
+  </div>
+  <div class="caderno-section">
+    <h3>📝 Resumo para o Caderno — Probabilidade e Distribuições Discretas</h3>
+    <ol>
+      <li>Probabilidade mede chance de ocorrência.</li>
+      <li>Ela ajuda a pensar eventos possíveis.</li>
+      <li>Distribuição binomial usa sucesso e fracasso.</li>
+      <li>Distribuição geométrica observa tentativas até o primeiro sucesso.</li>
+      <li>Distribuição de Poisson trata de ocorrências em intervalo.</li>
+      <li>Essas distribuições são discretas.</li>
+      <li>Eventos discretos têm contagens separadas.</li>
+      <li>No projeto, probabilidade amplia a leitura de padrões.</li>
+      <li>Probabilidade não é adivinhação; é cálculo e interpretação.</li>
+      <li>Chance e contexto precisam ser lidos com cuidado.</li>
+    </ol>
+  </div>
+  <div class="quiz-section">
+    <h2>🎮 Quiz — Probabilidade e Distribuições Discretas</h2>
+    <p style="opacity:0.8;margin-bottom:16px">10 questões para testar seu conhecimento!</p>
+  
+<style>
+.quiz-panel{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 18px}
+.quiz-stat{background:#fff;color:#1F0A3C;border-radius:14px;padding:14px;text-align:center;box-shadow:0 6px 18px rgba(59,7,100,.12);border:1px solid #E9D5FF}
+.quiz-stat strong{display:block;font-size:1.3rem;margin-top:4px}
+.progress-wrap{background:#E5E7EB;border-radius:999px;height:14px;overflow:hidden;margin:14px 0}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#FF6B35,#A855F7)}
+.quiz-meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.quiz-pill{background:#fff;border:1px solid #E9D5FF;border-radius:999px;padding:8px 14px;color:#1F0A3C;font-weight:700}
+.quiz-question{background:#fff;border:2px solid #E9D5FF;border-radius:16px;padding:18px;margin:16px 0;color:#1F0A3C}
+.quiz-question h4{margin-bottom:12px;font-size:1rem}
+.quiz-option{display:block;margin:8px 0;padding:10px 12px;border-radius:12px;border:1px solid #D8B4FE;cursor:pointer;background:#FAF5FF;color:#1F0A3C;font-weight:600}
+.quiz-option input{margin-right:10px}
+.quiz-question.correct{border-color:#22C55E;background:#F0FDF4}
+.quiz-question.incorrect{border-color:#EF4444;background:#FEF2F2}
+.quiz-feedback{margin-top:10px;font-weight:700}
+.quiz-actions{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.quiz-btn{background:linear-gradient(90deg,#6B21A8,#FF6B35);color:#fff;border:none;border-radius:999px;padding:12px 22px;font-weight:700;cursor:pointer}
+.quiz-btn.secondary{background:#fff;color:#6B21A8;border:2px solid #6B21A8}
+@media(max-width:720px){.quiz-panel{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+    <div class="quiz-panel">
+      <div class="quiz-stat">Pontos<strong id="points">0</strong></div>
+      <div class="quiz-stat">Acertos<strong id="correct">0</strong></div>
+      <div class="quiz-stat">Respondidas<strong id="answered">0/10</strong></div>
+      <div class="quiz-stat">Nível<strong id="level">Iniciante</strong></div>
+    </div>
+    <div class="progress-wrap"><div class="progress-bar" id="progress"></div></div>
+    <div class="quiz-meta">
+      <div class="quiz-pill">💬 <span id="message">Responda as questões e acompanhe seu desempenho!</span></div>
+      <div class="quiz-pill">❌ Erros: <span id="errors">0</span></div>
+      <div class="quiz-pill">📌 Restantes: <span id="remaining">10</span></div>
+    </div>
+    <div class="quiz-question" id="q0" data-done="0"><h4>1. O que a probabilidade mede?</h4><label class="quiz-option"><input type="radio" name="q0" value="0"> <strong>A.</strong> A chance de um evento acontecer.</label><label class="quiz-option"><input type="radio" name="q0" value="1"> <strong>B.</strong> A média dos dados.</label><label class="quiz-option"><input type="radio" name="q0" value="2"> <strong>C.</strong> A ordem dos gráficos.</label><label class="quiz-option"><input type="radio" name="q0" value="3"> <strong>D.</strong> A estrutura do texto.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q1" data-done="0"><h4>2. Qual distribuição usa sucesso e fracasso em várias tentativas?</h4><label class="quiz-option"><input type="radio" name="q1" value="0"> <strong>A.</strong> Poisson</label><label class="quiz-option"><input type="radio" name="q1" value="1"> <strong>B.</strong> Binomial</label><label class="quiz-option"><input type="radio" name="q1" value="2"> <strong>C.</strong> Normal</label><label class="quiz-option"><input type="radio" name="q1" value="3"> <strong>D.</strong> Qui-quadrado</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q2" data-done="0"><h4>3. A distribuição geométrica observa:</h4><label class="quiz-option"><input type="radio" name="q2" value="0"> <strong>A.</strong> A média dos grupos.</label><label class="quiz-option"><input type="radio" name="q2" value="1"> <strong>B.</strong> A variância populacional.</label><label class="quiz-option"><input type="radio" name="q2" value="2"> <strong>C.</strong> O número de tentativas até o primeiro sucesso.</label><label class="quiz-option"><input type="radio" name="q2" value="3"> <strong>D.</strong> A mediana do conjunto.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q3" data-done="0"><h4>4. A distribuição de Poisson costuma modelar:</h4><label class="quiz-option"><input type="radio" name="q3" value="0"> <strong>A.</strong> Apenas dados qualitativos.</label><label class="quiz-option"><input type="radio" name="q3" value="1"> <strong>B.</strong> Somente notas escolares.</label><label class="quiz-option"><input type="radio" name="q3" value="2"> <strong>C.</strong> Valores centrais do boxplot.</label><label class="quiz-option"><input type="radio" name="q3" value="3"> <strong>D.</strong> Ocorrências em determinado intervalo.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q4" data-done="0"><h4>5. Probabilidade no projeto ajuda a pensar:</h4><label class="quiz-option"><input type="radio" name="q4" value="0"> <strong>A.</strong> Padrões de ocorrência na escola.</label><label class="quiz-option"><input type="radio" name="q4" value="1"> <strong>B.</strong> Somente revisão textual.</label><label class="quiz-option"><input type="radio" name="q4" value="2"> <strong>C.</strong> Limpeza da base.</label><label class="quiz-option"><input type="radio" name="q4" value="3"> <strong>D.</strong> Comunicação final.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q5" data-done="0"><h4>6. Eventos discretos são aqueles que:</h4><label class="quiz-option"><input type="radio" name="q5" value="0"> <strong>A.</strong> Formam apenas intervalos contínuos.</label><label class="quiz-option"><input type="radio" name="q5" value="1"> <strong>B.</strong> Podem ser contados separadamente.</label><label class="quiz-option"><input type="radio" name="q5" value="2"> <strong>C.</strong> Nunca se repetem.</label><label class="quiz-option"><input type="radio" name="q5" value="3"> <strong>D.</strong> Não têm contexto.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q6" data-done="0"><h4>7. Em uma situação binomial, cada tentativa tem geralmente:</h4><label class="quiz-option"><input type="radio" name="q6" value="0"> <strong>A.</strong> Muitas respostas abertas.</label><label class="quiz-option"><input type="radio" name="q6" value="1"> <strong>B.</strong> Gráfico pronto.</label><label class="quiz-option"><input type="radio" name="q6" value="2"> <strong>C.</strong> Dois resultados possíveis principais.</label><label class="quiz-option"><input type="radio" name="q6" value="3"> <strong>D.</strong> Percentis obrigatórios.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q7" data-done="0"><h4>8. Probabilidade não significa:</h4><label class="quiz-option"><input type="radio" name="q7" value="0"> <strong>A.</strong> Chance analisada com critério.</label><label class="quiz-option"><input type="radio" name="q7" value="1"> <strong>B.</strong> Leitura de possibilidades.</label><label class="quiz-option"><input type="radio" name="q7" value="2"> <strong>C.</strong> Uso de modelos estatísticos.</label><label class="quiz-option"><input type="radio" name="q7" value="3"> <strong>D.</strong> Adivinhação sem base.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q8" data-done="0"><h4>9. A distribuição geométrica termina quando ocorre:</h4><label class="quiz-option"><input type="radio" name="q8" value="0"> <strong>A.</strong> O primeiro sucesso</label><label class="quiz-option"><input type="radio" name="q8" value="1"> <strong>B.</strong> A média</label><label class="quiz-option"><input type="radio" name="q8" value="2"> <strong>C.</strong> O quartil 1</label><label class="quiz-option"><input type="radio" name="q8" value="3"> <strong>D.</strong> A regressão</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q9" data-done="0"><h4>10. A Poisson é útil quando queremos ler:</h4><label class="quiz-option"><input type="radio" name="q9" value="0"> <strong>A.</strong> Quantidade de ocorrências em um intervalo.</label><label class="quiz-option"><input type="radio" name="q9" value="1"> <strong>B.</strong> Apenas o valor mais repetido.</label><label class="quiz-option"><input type="radio" name="q9" value="2"> <strong>C.</strong> O valor do meio.</label><label class="quiz-option"><input type="radio" name="q9" value="3"> <strong>D.</strong> Somente dados nominais.</label><div class="quiz-feedback"></div></div><p id="final" style="font-weight:800;color:#1F0A3C;margin-top:12px"></p><div class="quiz-actions"><button class="quiz-btn secondary" id="restartQuiz">🔄 Reiniciar quiz</button></div>
+<script>
+(function(){
+ const quizData = [{"prompt": "O que a probabilidade mede?", "options": ["A chance de um evento acontecer.", "A média dos dados.", "A ordem dos gráficos.", "A estrutura do texto."], "correct": 0}, {"prompt": "Qual distribuição usa sucesso e fracasso em várias tentativas?", "options": ["Poisson", "Binomial", "Normal", "Qui-quadrado"], "correct": 1}, {"prompt": "A distribuição geométrica observa:", "options": ["A média dos grupos.", "A variância populacional.", "O número de tentativas até o primeiro sucesso.", "A mediana do conjunto."], "correct": 2}, {"prompt": "A distribuição de Poisson costuma modelar:", "options": ["Apenas dados qualitativos.", "Somente notas escolares.", "Valores centrais do boxplot.", "Ocorrências em determinado intervalo."], "correct": 3}, {"prompt": "Probabilidade no projeto ajuda a pensar:", "options": ["Padrões de ocorrência na escola.", "Somente revisão textual.", "Limpeza da base.", "Comunicação final."], "correct": 0}, {"prompt": "Eventos discretos são aqueles que:", "options": ["Formam apenas intervalos contínuos.", "Podem ser contados separadamente.", "Nunca se repetem.", "Não têm contexto."], "correct": 1}, {"prompt": "Em uma situação binomial, cada tentativa tem geralmente:", "options": ["Muitas respostas abertas.", "Gráfico pronto.", "Dois resultados possíveis principais.", "Percentis obrigatórios."], "correct": 2}, {"prompt": "Probabilidade não significa:", "options": ["Chance analisada com critério.", "Leitura de possibilidades.", "Uso de modelos estatísticos.", "Adivinhação sem base."], "correct": 3}, {"prompt": "A distribuição geométrica termina quando ocorre:", "options": ["O primeiro sucesso", "A média", "O quartil 1", "A regressão"], "correct": 0}, {"prompt": "A Poisson é útil quando queremos ler:", "options": ["Quantidade de ocorrências em um intervalo.", "Apenas o valor mais repetido.", "O valor do meio.", "Somente dados nominais."], "correct": 1}];
+ let points=0, correctCount=0, answered=0, errors=0;
+ function levelFromPoints(p){ if(p>=90) return "Mestre"; if(p>=70) return "Avançado"; if(p>=40) return "Intermediário"; return "Iniciante"; }
+ function renderStats(){
+   document.getElementById('points').textContent = points;
+   document.getElementById('correct').textContent = correctCount;
+   document.getElementById('answered').textContent = answered + "/" + quizData.length;
+   document.getElementById('level').textContent = levelFromPoints(points);
+   document.getElementById('errors').textContent = errors;
+   document.getElementById('remaining').textContent = quizData.length - answered;
+   const percent = (answered/quizData.length)*100;
+   document.getElementById('progress').style.width = percent + '%';
+   let msg = "Você está começando muito bem!";
+   if (answered === 0) msg = "Responda as questões e acompanhe seu desempenho!";
+   else if (correctCount === quizData.length) msg = "Perfeito! Desempenho excelente!";
+   else if (correctCount/answered >= 0.8) msg = "Ótimo ritmo! Continue assim!";
+   else if (correctCount/answered >= 0.5) msg = "Bom caminho! Revise alguns pontos.";
+   else msg = "Vale revisar a aula e tentar novamente.";
+   document.getElementById('message').textContent = msg;
+   if(answered===quizData.length){
+      document.getElementById('final').textContent = `Quiz finalizado! Você fez ${points} pontos e acertou ${correctCount} de ${quizData.length}.`;
+   } else {
+      document.getElementById('final').textContent = '';
+   }
+ }
+ function bindQuiz(){
+   quizData.forEach((q, idx)=>{
+      const wrapper = document.getElementById('q'+idx);
+      wrapper.querySelectorAll('input').forEach((input)=>{
+          input.addEventListener('change', function(){
+             if(wrapper.dataset.done === '1') return;
+             wrapper.dataset.done = '1';
+             answered += 1;
+             const selected = Number(this.value);
+             const feedback = wrapper.querySelector('.quiz-feedback');
+             if(selected === q.correct){
+                points += 10;
+                correctCount += 1;
+                wrapper.classList.add('correct');
+                feedback.textContent = "✅ Resposta correta!";
+                feedback.style.color = "#166534";
+             }else{
+                errors += 1;
+                wrapper.classList.add('incorrect');
+                feedback.textContent = "❌ Resposta incorreta. Revise esse ponto da aula.";
+                feedback.style.color = "#991B1B";
+                wrapper.querySelectorAll('label')[q.correct].style.borderColor = "#22C55E";
+                wrapper.querySelectorAll('label')[q.correct].style.background = "#DCFCE7";
+             }
+             wrapper.querySelectorAll('input').forEach(i=>i.disabled=true);
+             renderStats();
+          });
+      });
+   });
+   document.getElementById('restartQuiz').addEventListener('click', function(){
+      points=0; correctCount=0; answered=0; errors=0;
+      document.querySelectorAll('.quiz-question').forEach((wrapper, idx)=>{
+         wrapper.dataset.done='0';
+         wrapper.classList.remove('correct','incorrect');
+         wrapper.querySelector('.quiz-feedback').textContent='';
+         wrapper.querySelectorAll('label').forEach(l=>{
+            l.style.borderColor = '#D8B4FE'; l.style.background = '#FAF5FF';
+         });
+         wrapper.querySelectorAll('input').forEach(i=>{i.disabled=false; i.checked=false;});
+      });
+      renderStats();
+      window.scrollTo({top: document.querySelector('.quiz-section').offsetTop - 20, behavior:'smooth'});
+   });
+   renderStats();
+ }
+ document.addEventListener('DOMContentLoaded', bindQuiz);
+})();
+</script>
+
+</div>
+</div>
+</body>
+</html>

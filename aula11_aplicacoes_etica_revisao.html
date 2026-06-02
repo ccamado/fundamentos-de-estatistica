@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundamentos de Estatística — Aplicações da Estatística, Ética e Revisão Final</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="index.html" class="btn-back">← Voltar ao Menu</a>
+<div class="aula-container">
+  <div class="aula-hero">
+    <div class="aula-num">AULA 11 • EM BREVE</div>
+    <h1>🌍 Aplicações da Estatística, Ética e Revisão Final</h1>
+    <div class="aula-meta">
+      <span>📅 15/07/2026</span>
+      <span>⏱ 4 aulas de 50 minutos</span>
+      <span>🎯 Escola que Queremos</span>
+      <span>📚 Fundamentos de Estatística · 1º Ano A</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🎯 O que vamos aprender?</h2>
+    <p>Nesta aula final do semestre, vamos fechar o percurso mostrando onde a Estatística aparece, como ela ajuda na tomada de decisão e por que seu uso precisa ser ético e responsável.</p>
+    <div class="destaque">💡 Aplicação no projeto: Fechar o semestre mostrando que a Estatística ajuda a escola a compreender prioridades, tomar decisões e interpretar dados com responsabilidade.</div>
+  </div>
+  <div class="card roxo">
+    <h2>📘 Conteúdo principal</h2>
+    <div class="conceito-box"><strong>Conceito central:</strong> A Estatística orienta decisões quando os dados são lidos com critério, contexto e ética.</div>
+    <p>A Estatística aparece em áreas como educação, saúde, negócios, ciências e administração. Ela ajuda a interpretar situações, comparar cenários e sustentar decisões. Mas usar dados exige ética: respeitar limites da coleta, evitar distorções, não manipular resultados e reconhecer o contexto dos públicos. No projeto, isso significa ler a escola com responsabilidade e compromisso com a realidade.</p>
+  </div>
+  <div class="caderno-section">
+    <h3>📝 Resumo para o Caderno — Aplicações da Estatística, Ética e Revisão Final</h3>
+    <ol>
+      <li>A Estatística é usada em muitas áreas da sociedade.</li>
+      <li>Ela ajuda a interpretar dados e tomar decisões.</li>
+      <li>Na escola, apoia leituras mais objetivas da realidade.</li>
+      <li>Tomar decisão com dados exige responsabilidade.</li>
+      <li>Ética estatística evita distorções e exageros.</li>
+      <li>Não basta calcular; é preciso interpretar com cuidado.</li>
+      <li>O contexto dos dados precisa ser considerado.</li>
+      <li>No projeto, os públicos devem ser lidos com respeito.</li>
+      <li>A Estatística apoia o painel e a compreensão da escola.</li>
+      <li>Fechar o semestre é integrar conceito, leitura e responsabilidade.</li>
+    </ol>
+  </div>
+  <div class="quiz-section">
+    <h2>🎮 Quiz — Aplicações e Ética da Estatística</h2>
+    <p style="opacity:0.8;margin-bottom:16px">10 questões para testar seu conhecimento!</p>
+  
+<style>
+.quiz-panel{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 18px}
+.quiz-stat{background:#fff;color:#1F0A3C;border-radius:14px;padding:14px;text-align:center;box-shadow:0 6px 18px rgba(59,7,100,.12);border:1px solid #E9D5FF}
+.quiz-stat strong{display:block;font-size:1.3rem;margin-top:4px}
+.progress-wrap{background:#E5E7EB;border-radius:999px;height:14px;overflow:hidden;margin:14px 0}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#FF6B35,#A855F7)}
+.quiz-meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.quiz-pill{background:#fff;border:1px solid #E9D5FF;border-radius:999px;padding:8px 14px;color:#1F0A3C;font-weight:700}
+.quiz-question{background:#fff;border:2px solid #E9D5FF;border-radius:16px;padding:18px;margin:16px 0;color:#1F0A3C}
+.quiz-question h4{margin-bottom:12px;font-size:1rem}
+.quiz-option{display:block;margin:8px 0;padding:10px 12px;border-radius:12px;border:1px solid #D8B4FE;cursor:pointer;background:#FAF5FF;color:#1F0A3C;font-weight:600}
+.quiz-option input{margin-right:10px}
+.quiz-question.correct{border-color:#22C55E;background:#F0FDF4}
+.quiz-question.incorrect{border-color:#EF4444;background:#FEF2F2}
+.quiz-feedback{margin-top:10px;font-weight:700}
+.quiz-actions{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.quiz-btn{background:linear-gradient(90deg,#6B21A8,#FF6B35);color:#fff;border:none;border-radius:999px;padding:12px 22px;font-weight:700;cursor:pointer}
+.quiz-btn.secondary{background:#fff;color:#6B21A8;border:2px solid #6B21A8}
+@media(max-width:720px){.quiz-panel{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+    <div class="quiz-panel">
+      <div class="quiz-stat">Pontos<strong id="points">0</strong></div>
+      <div class="quiz-stat">Acertos<strong id="correct">0</strong></div>
+      <div class="quiz-stat">Respondidas<strong id="answered">0/10</strong></div>
+      <div class="quiz-stat">Nível<strong id="level">Iniciante</strong></div>
+    </div>
+    <div class="progress-wrap"><div class="progress-bar" id="progress"></div></div>
+    <div class="quiz-meta">
+      <div class="quiz-pill">💬 <span id="message">Responda as questões e acompanhe seu desempenho!</span></div>
+      <div class="quiz-pill">❌ Erros: <span id="errors">0</span></div>
+      <div class="quiz-pill">📌 Restantes: <span id="remaining">10</span></div>
+    </div>
+    <div class="quiz-question" id="q0" data-done="0"><h4>1. A Estatística pode ser aplicada em:</h4><label class="quiz-option"><input type="radio" name="q0" value="0"> <strong>A.</strong> Educação, saúde, negócios e outras áreas.</label><label class="quiz-option"><input type="radio" name="q0" value="1"> <strong>B.</strong> Somente em laboratório.</label><label class="quiz-option"><input type="radio" name="q0" value="2"> <strong>C.</strong> Apenas em provas escolares.</label><label class="quiz-option"><input type="radio" name="q0" value="3"> <strong>D.</strong> Só em matemática financeira.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q1" data-done="0"><h4>2. Tomar decisão com dados exige:</h4><label class="quiz-option"><input type="radio" name="q1" value="0"> <strong>A.</strong> Pressa</label><label class="quiz-option"><input type="radio" name="q1" value="1"> <strong>B.</strong> Responsabilidade</label><label class="quiz-option"><input type="radio" name="q1" value="2"> <strong>C.</strong> Apenas opinião</label><label class="quiz-option"><input type="radio" name="q1" value="3"> <strong>D.</strong> Só gráficos coloridos</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q2" data-done="0"><h4>3. Uso ético da Estatística significa:</h4><label class="quiz-option"><input type="radio" name="q2" value="0"> <strong>A.</strong> Manipular dados para convencer.</label><label class="quiz-option"><input type="radio" name="q2" value="1"> <strong>B.</strong> Ignorar o contexto.</label><label class="quiz-option"><input type="radio" name="q2" value="2"> <strong>C.</strong> Interpretar com cuidado e honestidade.</label><label class="quiz-option"><input type="radio" name="q2" value="3"> <strong>D.</strong> Substituir a realidade por números.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q3" data-done="0"><h4>4. No projeto da escola, ler dados com ética significa:</h4><label class="quiz-option"><input type="radio" name="q3" value="0"> <strong>A.</strong> Apagar respostas divergentes.</label><label class="quiz-option"><input type="radio" name="q3" value="1"> <strong>B.</strong> Esconder resultados difíceis.</label><label class="quiz-option"><input type="radio" name="q3" value="2"> <strong>C.</strong> Usar apenas o que favorece um grupo.</label><label class="quiz-option"><input type="radio" name="q3" value="3"> <strong>D.</strong> Respeitar os públicos e evitar distorções.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q4" data-done="0"><h4>5. A Estatística ajuda a escola a:</h4><label class="quiz-option"><input type="radio" name="q4" value="0"> <strong>A.</strong> Compreender prioridades com base em dados.</label><label class="quiz-option"><input type="radio" name="q4" value="1"> <strong>B.</strong> Dispensar a escuta da comunidade.</label><label class="quiz-option"><input type="radio" name="q4" value="2"> <strong>C.</strong> Evitar qualquer interpretação.</label><label class="quiz-option"><input type="radio" name="q4" value="3"> <strong>D.</strong> Substituir todas as disciplinas.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q5" data-done="0"><h4>6. Um uso inadequado dos dados pode gerar:</h4><label class="quiz-option"><input type="radio" name="q5" value="0"> <strong>A.</strong> Análise responsável</label><label class="quiz-option"><input type="radio" name="q5" value="1"> <strong>B.</strong> Distorção de conclusões</label><label class="quiz-option"><input type="radio" name="q5" value="2"> <strong>C.</strong> Leitura crítica</label><label class="quiz-option"><input type="radio" name="q5" value="3"> <strong>D.</strong> Comparação honesta</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q6" data-done="0"><h4>7. Interpretar dados bem depende de:</h4><label class="quiz-option"><input type="radio" name="q6" value="0"> <strong>A.</strong> Cálculo sem contexto</label><label class="quiz-option"><input type="radio" name="q6" value="1"> <strong>B.</strong> Apenas da moda</label><label class="quiz-option"><input type="radio" name="q6" value="2"> <strong>C.</strong> Contexto, critério e responsabilidade</label><label class="quiz-option"><input type="radio" name="q6" value="3"> <strong>D.</strong> Somente do gráfico</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q7" data-done="0"><h4>8. No semestre, a Estatística ajudou a turma a:</h4><label class="quiz-option"><input type="radio" name="q7" value="0"> <strong>A.</strong> Abandonar a pesquisa.</label><label class="quiz-option"><input type="radio" name="q7" value="1"> <strong>B.</strong> Fazer só cópias no caderno.</label><label class="quiz-option"><input type="radio" name="q7" value="2"> <strong>C.</strong> Trocar o projeto integrador.</label><label class="quiz-option"><input type="radio" name="q7" value="3"> <strong>D.</strong> Organizar, representar e interpretar dados da escola.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q8" data-done="0"><h4>9. Ética no uso dos dados é importante porque:</h4><label class="quiz-option"><input type="radio" name="q8" value="0"> <strong>A.</strong> Os dados influenciam decisões e leituras da realidade.</label><label class="quiz-option"><input type="radio" name="q8" value="1"> <strong>B.</strong> Impede todo cálculo.</label><label class="quiz-option"><input type="radio" name="q8" value="2"> <strong>C.</strong> Serve apenas para adultos.</label><label class="quiz-option"><input type="radio" name="q8" value="3"> <strong>D.</strong> Só aparece no final do curso.</label><div class="quiz-feedback"></div></div><div class="quiz-question" id="q9" data-done="0"><h4>10. Fechar o semestre com revisão ajuda a:</h4><label class="quiz-option"><input type="radio" name="q9" value="0"> <strong>A.</strong> Eliminar a necessidade do projeto.</label><label class="quiz-option"><input type="radio" name="q9" value="1"> <strong>B.</strong> Integrar conceitos, aplicações e responsabilidade.</label><label class="quiz-option"><input type="radio" name="q9" value="2"> <strong>C.</strong> Trocar a amostra pela população.</label><label class="quiz-option"><input type="radio" name="q9" value="3"> <strong>D.</strong> Fazer menos perguntas.</label><div class="quiz-feedback"></div></div><p id="final" style="font-weight:800;color:#1F0A3C;margin-top:12px"></p><div class="quiz-actions"><button class="quiz-btn secondary" id="restartQuiz">🔄 Reiniciar quiz</button></div>
+<script>
+(function(){
+ const quizData = [{"prompt": "A Estatística pode ser aplicada em:", "options": ["Educação, saúde, negócios e outras áreas.", "Somente em laboratório.", "Apenas em provas escolares.", "Só em matemática financeira."], "correct": 0}, {"prompt": "Tomar decisão com dados exige:", "options": ["Pressa", "Responsabilidade", "Apenas opinião", "Só gráficos coloridos"], "correct": 1}, {"prompt": "Uso ético da Estatística significa:", "options": ["Manipular dados para convencer.", "Ignorar o contexto.", "Interpretar com cuidado e honestidade.", "Substituir a realidade por números."], "correct": 2}, {"prompt": "No projeto da escola, ler dados com ética significa:", "options": ["Apagar respostas divergentes.", "Esconder resultados difíceis.", "Usar apenas o que favorece um grupo.", "Respeitar os públicos e evitar distorções."], "correct": 3}, {"prompt": "A Estatística ajuda a escola a:", "options": ["Compreender prioridades com base em dados.", "Dispensar a escuta da comunidade.", "Evitar qualquer interpretação.", "Substituir todas as disciplinas."], "correct": 0}, {"prompt": "Um uso inadequado dos dados pode gerar:", "options": ["Análise responsável", "Distorção de conclusões", "Leitura crítica", "Comparação honesta"], "correct": 1}, {"prompt": "Interpretar dados bem depende de:", "options": ["Cálculo sem contexto", "Apenas da moda", "Contexto, critério e responsabilidade", "Somente do gráfico"], "correct": 2}, {"prompt": "No semestre, a Estatística ajudou a turma a:", "options": ["Abandonar a pesquisa.", "Fazer só cópias no caderno.", "Trocar o projeto integrador.", "Organizar, representar e interpretar dados da escola."], "correct": 3}, {"prompt": "Ética no uso dos dados é importante porque:", "options": ["Os dados influenciam decisões e leituras da realidade.", "Impede todo cálculo.", "Serve apenas para adultos.", "Só aparece no final do curso."], "correct": 0}, {"prompt": "Fechar o semestre com revisão ajuda a:", "options": ["Eliminar a necessidade do projeto.", "Integrar conceitos, aplicações e responsabilidade.", "Trocar a amostra pela população.", "Fazer menos perguntas."], "correct": 1}];
+ let points=0, correctCount=0, answered=0, errors=0;
+ function levelFromPoints(p){ if(p>=90) return "Mestre"; if(p>=70) return "Avançado"; if(p>=40) return "Intermediário"; return "Iniciante"; }
+ function renderStats(){
+   document.getElementById('points').textContent = points;
+   document.getElementById('correct').textContent = correctCount;
+   document.getElementById('answered').textContent = answered + "/" + quizData.length;
+   document.getElementById('level').textContent = levelFromPoints(points);
+   document.getElementById('errors').textContent = errors;
+   document.getElementById('remaining').textContent = quizData.length - answered;
+   const percent = (answered/quizData.length)*100;
+   document.getElementById('progress').style.width = percent + '%';
+   let msg = "Você está começando muito bem!";
+   if (answered === 0) msg = "Responda as questões e acompanhe seu desempenho!";
+   else if (correctCount === quizData.length) msg = "Perfeito! Desempenho excelente!";
+   else if (correctCount/answered >= 0.8) msg = "Ótimo ritmo! Continue assim!";
+   else if (correctCount/answered >= 0.5) msg = "Bom caminho! Revise alguns pontos.";
+   else msg = "Vale revisar a aula e tentar novamente.";
+   document.getElementById('message').textContent = msg;
+   if(answered===quizData.length){
+      document.getElementById('final').textContent = `Quiz finalizado! Você fez ${points} pontos e acertou ${correctCount} de ${quizData.length}.`;
+   } else {
+      document.getElementById('final').textContent = '';
+   }
+ }
+ function bindQuiz(){
+   quizData.forEach((q, idx)=>{
+      const wrapper = document.getElementById('q'+idx);
+      wrapper.querySelectorAll('input').forEach((input)=>{
+          input.addEventListener('change', function(){
+             if(wrapper.dataset.done === '1') return;
+             wrapper.dataset.done = '1';
+             answered += 1;
+             const selected = Number(this.value);
+             const feedback = wrapper.querySelector('.quiz-feedback');
+             if(selected === q.correct){
+                points += 10;
+                correctCount += 1;
+                wrapper.classList.add('correct');
+                feedback.textContent = "✅ Resposta correta!";
+                feedback.style.color = "#166534";
+             }else{
+                errors += 1;
+                wrapper.classList.add('incorrect');
+                feedback.textContent = "❌ Resposta incorreta. Revise esse ponto da aula.";
+                feedback.style.color = "#991B1B";
+                wrapper.querySelectorAll('label')[q.correct].style.borderColor = "#22C55E";
+                wrapper.querySelectorAll('label')[q.correct].style.background = "#DCFCE7";
+             }
+             wrapper.querySelectorAll('input').forEach(i=>i.disabled=true);
+             renderStats();
+          });
+      });
+   });
+   document.getElementById('restartQuiz').addEventListener('click', function(){
+      points=0; correctCount=0; answered=0; errors=0;
+      document.querySelectorAll('.quiz-question').forEach((wrapper, idx)=>{
+         wrapper.dataset.done='0';
+         wrapper.classList.remove('correct','incorrect');
+         wrapper.querySelector('.quiz-feedback').textContent='';
+         wrapper.querySelectorAll('label').forEach(l=>{
+            l.style.borderColor = '#D8B4FE'; l.style.background = '#FAF5FF';
+         });
+         wrapper.querySelectorAll('input').forEach(i=>{i.disabled=false; i.checked=false;});
+      });
+      renderStats();
+      window.scrollTo({top: document.querySelector('.quiz-section').offsetTop - 20, behavior:'smooth'});
+   });
+   renderStats();
+ }
+ document.addEventListener('DOMContentLoaded', bindQuiz);
+})();
+</script>
+
+</div>
+</div>
+</body>
+</html>
