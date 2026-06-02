@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aula 27 — Interpretação de histograma</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="index.html" class="btn-back">← Voltar ao Menu</a>
+<div class="aula-container">
+  <div class="aula-hero">
+    <div class="aula-num">EM BREVE</div>
+    <h1>📶 Aula 27 — Interpretação de histograma</h1>
+    <div class="aula-meta">
+      <span>📅 17/06/2026</span>
+      <span>⏱ 50 minutos</span>
+      <span>🎯 Escola que Queremos</span>
+      <span>📚 Fundamentos de Estatística</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🎯 O que vamos aprender?</h2>
+    <p>Nesta aula, vamos estudar interpretação de histograma de forma prática e conectada ao projeto Escola que Queremos. O objetivo é entender como esse conceito ajuda a organizar, comparar ou interpretar dados da comunidade escolar, sem sair do papel próprio de Fundamentos de Estatística.</p>
+    <div class="destaque">💡 Aplicação no projeto: Observar concentração e variação em dados escolares.</div>
+  </div>
+  <div class="card roxo">
+    <h2>📘 Conteúdo principal</h2>
+    <div class="conceito-box"><strong>Conceito central:</strong> O histograma representa a distribuição de dados quantitativos por intervalos.</div>
+    <p>O histograma representa a distribuição de dados quantitativos por intervalos. Nesta aula, a turma vai trabalhar esse conceito de forma simples, usando exemplos do cotidiano escolar e situações próximas da pesquisa de campo do 1º A. A ideia é compreender não apenas a definição, mas também para que o conceito serve quando precisamos analisar opiniões, ocorrências, medidas e comparações dentro da escola. No projeto Escola que Queremos, esse conteúdo será usado para ler melhor os dados coletados pela turma. A microentrega prevista é: Interpretação orientada de histograma.</p>
+  </div>
+  <div class="caderno-section">
+    <h3>📝 Resumo para o Caderno — Interpretação de histograma</h3>
+    <ol>
+      <li>Interpretação de histograma é um conteúdo importante da leitura estatística.</li>
+      <li>O histograma representa a distribuição de dados quantitativos por intervalos.</li>
+      <li>Na Estatística, organizar bem o dado ajuda a interpretar melhor a realidade.</li>
+      <li>No projeto Escola que Queremos, os conceitos precisam servir para ler dados da escola.</li>
+      <li>Aplicação no projeto: Observar concentração e variação em dados escolares.</li>
+      <li>Microentrega da aula: Interpretação orientada de histograma.</li>
+      <li>Tabelas, gráficos e medidas ajudam a transformar respostas em informação.</li>
+      <li>Comparar dados exige atenção ao tipo de informação e ao objetivo da leitura.</li>
+      <li>A interpretação estatística precisa ser clara, responsável e ligada ao contexto real.</li>
+      <li>Aprender Estatística aqui significa usar números e registros para compreender melhor a escola.</li>
+    </ol>
+  </div>
+  <div class="quiz-section">
+    <h2>🎮 Quiz — Interpretação de histograma</h2>
+    <p style="opacity:0.8;margin-bottom:16px">10 questões para testar seu conhecimento!</p>
+  
+<div class="quiz-wrap">
+  <div class="quiz-stats">
+    <div class="stat-card"><strong id="points">0</strong><span>Pontos</span></div>
+    <div class="stat-card"><strong id="hits">0</strong><span>Acertos</span></div>
+    <div class="stat-card"><strong id="answered">0/10</strong><span>Respondidas</span></div>
+    <div class="stat-card"><strong id="level">Iniciante</strong><span>Nível</span></div>
+  </div>
+  <div class="progress-wrap"><div class="progress-bar" id="bar"></div></div>
+  <div class="quiz-meta">
+    <span>💬 <strong id="performance">Vamos começar!</strong></span>
+    <span>❌ Erros: <strong id="errors">0</strong></span>
+    <span>📌 Restantes: <strong id="remaining">10</strong></span>
+  </div>
+  <div id="questions"></div>
+  <div id="result" class="quiz-result"></div>
+  <div class="quiz-actions"><button onclick="restartQuiz()">🔄 Reiniciar quiz</button></div>
+</div>
+
+</div>
+</div>
+
+<style>
+.quiz-wrap{background:#fff;border-radius:20px;padding:24px;box-shadow:var(--sombra);margin-top:16px}
+.quiz-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.stat-card{background:linear-gradient(135deg,#F5F3FF,#FFF7ED);border:1px solid #E9D5FF;border-radius:14px;padding:14px;text-align:center}
+.stat-card strong{display:block;font-size:1.4rem;color:var(--roxo)}
+.stat-card span{font-size:.85rem;color:#4B5563;font-weight:700}
+.progress-wrap{background:#E5E7EB;border-radius:999px;height:14px;overflow:hidden;margin:14px 0}
+.progress-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--roxo),var(--laranja));transition:width .3s}
+.quiz-meta{display:flex;gap:16px;flex-wrap:wrap;font-weight:700;color:#374151;margin:10px 0 18px}
+.question-card{border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin:16px 0;background:#fff}
+.question-card h4{margin-bottom:10px;color:var(--texto)}
+.options{display:grid;gap:10px}
+.option-btn{width:100%;text-align:left;padding:12px 14px;border-radius:12px;border:2px solid #D1D5DB;background:#fff;color:#111827;font-weight:600;cursor:pointer}
+.option-btn:hover{border-color:#A855F7}
+.option-btn.correct{background:#ECFDF5;border-color:#22C55E;color:#14532D}
+.option-btn.wrong{background:#FEF2F2;border-color:#EF4444;color:#7F1D1D}
+.option-btn.locked{cursor:not-allowed;opacity:.95}
+.quiz-result{display:none;margin-top:18px;padding:18px;border-radius:16px;background:linear-gradient(135deg,#F5F3FF,#FFF7ED);border:1px solid #E9D5FF}
+.quiz-actions{margin-top:14px}
+.quiz-actions button{background:linear-gradient(90deg,var(--roxo),var(--laranja));color:#fff;border:none;border-radius:999px;padding:12px 20px;font-weight:700;cursor:pointer}
+@media (max-width:700px){.quiz-stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+<script>
+const quizData = [{"q": "Qual ideia melhor resume o conteúdo de interpretação de histograma?", "options": [{"letter": "A", "text": "O histograma representa a distribuição de dados quantitativos por intervalos.", "correct": true}, {"letter": "B", "text": "Substituir a investigação científica pela análise estatística.", "correct": false}, {"letter": "C", "text": "Fazer a limpeza técnica completa da base de dados.", "correct": false}, {"letter": "D", "text": "Produzir a comunicação institucional final da escola.", "correct": false}]}, {"q": "No contexto do projeto Escola que Queremos, para que serve interpretação de histograma?", "options": [{"letter": "A", "text": "Substituir a investigação científica pela análise estatística.", "correct": false}, {"letter": "B", "text": "Observar concentração e variação em dados escolares.", "correct": true}, {"letter": "C", "text": "Fazer a limpeza técnica completa da base de dados.", "correct": false}, {"letter": "D", "text": "Produzir a comunicação institucional final da escola.", "correct": false}]}, {"q": "Qual leitura está mais alinhada ao tema desta aula?", "options": [{"letter": "A", "text": "Substituir a investigação científica pela análise estatística.", "correct": false}, {"letter": "B", "text": "Fazer a limpeza técnica completa da base de dados.", "correct": false}, {"letter": "C", "text": "Relacionar o conceito ao tratamento estatístico dos dados escolares.", "correct": true}, {"letter": "D", "text": "Produzir a comunicação institucional final da escola.", "correct": false}]}, {"q": "O que a turma deve observar ao estudar interpretação de histograma?", "options": [{"letter": "A", "text": "Substituir a investigação científica pela análise estatística.", "correct": false}, {"letter": "B", "text": "Fazer a limpeza técnica completa da base de dados.", "correct": false}, {"letter": "C", "text": "Produzir a comunicação institucional final da escola.", "correct": false}, {"letter": "D", "text": "Como o conceito organiza, compara ou interpreta dados da escola.", "correct": true}]}, {"q": "Qual afirmação está correta sobre interpretação de histograma?", "options": [{"letter": "A", "text": "O histograma representa a distribuição de dados quantitativos por intervalos. e pode ser aplicado ao projeto.", "correct": true}, {"letter": "B", "text": "Substituir a investigação científica pela análise estatística.", "correct": false}, {"letter": "C", "text": "Fazer a limpeza técnica completa da base de dados.", "correct": false}, {"letter": "D", "text": "Produzir a comunicação institucional final da escola.", "correct": false}]}, {"q": "Como esse conteúdo ajuda a ler os dados da escola?", "options": [{"letter": "A", "text": "Substituir a investigação científica pela análise estatística.", "correct": false}, {"letter": "B", "text": "Ajuda a transformar respostas e registros em leitura estatística.", "correct": true}, {"letter": "C", "text": "Fazer a limpeza técnica completa da base de dados.", "correct": false}, {"letter": "D", "text": "Produzir a comunicação institucional final da escola.", "correct": false}]}, {"q": "Qual é o foco principal desta aula sobre interpretação de histograma?", "options": [{"letter": "A", "text": "Substituir a investigação científica pela análise estatística.", "correct": false}, {"letter": "B", "text": "Fazer a limpeza técnica completa da base de dados.", "correct": false}, {"letter": "C", "text": "Compreender interpretação de histograma com exemplos do cotidiano escolar.", "correct": true}, {"letter": "D", "text": "Produzir a comunicação institucional final da escola.", "correct": false}]}, {"q": "Em Fundamentos de Estatística, interpretação de histograma contribui para quê?", "options": [{"letter": "A", "text": "Substituir a investigação científica pela análise estatística.", "correct": false}, {"letter": "B", "text": "Fazer a limpeza técnica completa da base de dados.", "correct": false}, {"letter": "C", "text": "Produzir a comunicação institucional final da escola.", "correct": false}, {"letter": "D", "text": "Contribui para resumir, comparar ou interpretar resultados do projeto.", "correct": true}]}, {"q": "Qual aplicação combina com o conteúdo desta aula?", "options": [{"letter": "A", "text": "Interpretação orientada de histograma.", "correct": true}, {"letter": "B", "text": "Substituir a investigação científica pela análise estatística.", "correct": false}, {"letter": "C", "text": "Fazer a limpeza técnica completa da base de dados.", "correct": false}, {"letter": "D", "text": "Produzir a comunicação institucional final da escola.", "correct": false}]}, {"q": "Qual síntese representa melhor a aula de interpretação de histograma?", "options": [{"letter": "A", "text": "Substituir a investigação científica pela análise estatística.", "correct": false}, {"letter": "B", "text": "Usar o conceito de modo claro, responsável e conectado ao projeto.", "correct": true}, {"letter": "C", "text": "Fazer a limpeza técnica completa da base de dados.", "correct": false}, {"letter": "D", "text": "Produzir a comunicação institucional final da escola.", "correct": false}]}];
+let score=0, correctCount=0, answered=0, errors=0;
+function levelLabel(points){
+  if(points>=90) return "Especialista";
+  if(points>=70) return "Avançando";
+  if(points>=40) return "Em prática";
+  return "Iniciante";
+}
+function updatePanel(){
+  document.getElementById('points').textContent = score;
+  document.getElementById('hits').textContent = correctCount;
+  document.getElementById('answered').textContent = answered + "/10";
+  document.getElementById('level').textContent = levelLabel(score);
+  document.getElementById('errors').textContent = errors;
+  document.getElementById('remaining').textContent = 10-answered;
+  const pct = (answered/10)*100;
+  document.getElementById('bar').style.width = pct + '%';
+  let msg = "Vamos começar!";
+  if(answered>0 && correctCount===answered) msg = "Excelente! Você está dominando o conteúdo.";
+  else if(answered>0 && correctCount/answered >= 0.7) msg = "Muito bem! Continue assim.";
+  else if(answered>0) msg = "Siga firme! Revise os conceitos e tente avançar.";
+  document.getElementById('performance').textContent = msg;
+  if(answered===10){
+    const box = document.getElementById('result');
+    box.style.display='block';
+    box.innerHTML = `<h3>🏁 Quiz finalizado!</h3><p>Você concluiu as 10 questões com <strong>${correctCount} acertos</strong>, <strong>${errors} erros</strong> e <strong>${score} pontos</strong>. Nível alcançado: <strong>${levelLabel(score)}</strong>.</p>`;
+  }
+}
+function answer(qIndex, btn, isCorrect){
+  const card = document.querySelector(`[data-q="${qIndex}"]`);
+  if(card.dataset.locked==='1') return;
+  card.dataset.locked='1';
+  answered += 1;
+  const buttons = card.querySelectorAll('.option-btn');
+  buttons.forEach(b => {
+    b.classList.add('locked');
+    if(b.dataset.correct==='1') b.classList.add('correct');
+  });
+  if(isCorrect){
+    score += 10; correctCount += 1; btn.classList.add('correct');
+  } else {
+    errors += 1; btn.classList.add('wrong');
+  }
+  updatePanel();
+}
+function restartQuiz(){
+  score=0; correctCount=0; answered=0; errors=0;
+  document.getElementById('result').style.display='none';
+  renderQuestions();
+  updatePanel();
+}
+function renderQuestions(){
+  const wrap = document.getElementById('questions');
+  wrap.innerHTML = '';
+  quizData.forEach((item, idx) => {
+    const card = document.createElement('div');
+    card.className = 'question-card';
+    card.dataset.q = idx;
+    card.innerHTML = `<h4>${idx+1}. ${item.q}</h4>`;
+    const opts = document.createElement('div');
+    opts.className = 'options';
+    item.options.forEach(opt => {
+      const b = document.createElement('button');
+      b.className = 'option-btn';
+      b.dataset.correct = opt.correct ? '1' : '0';
+      b.innerHTML = `<strong>${opt.letter}.</strong> ${opt.text}`;
+      b.onclick = () => answer(idx, b, !!opt.correct);
+      opts.appendChild(b);
+    });
+    card.appendChild(opts);
+    wrap.appendChild(card);
+  });
+}
+renderQuestions();
+updatePanel();
+</script>
+
+</body>
+</html>
