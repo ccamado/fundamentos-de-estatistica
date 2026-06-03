@@ -1,0 +1,51 @@
+ID_Registro,Data_Aplicacao,UBS,Bairro,Faixa_Etaria,Sexo,Vacina,Dose,Reacao_24h,Retorno_30dias
+VAC001,2026-06-06,UBS Centro,Centro,18-29,F,Influenza,Dose única,Nenhuma,Sim
+VAC002,2026-05-04,UBS Centro,Centro,12-17,F,HPV,1ª dose,Nenhuma,Sim
+VAC003,2026-05-03,UBS Oeste,Coophavila,18-29,M,COVID-19,Reforço,Dor no local,Não
+VAC004,2026-05-09,UBS Norte,Nova Lima,30-44,F,HPV,Dose única,Nenhuma,Não
+VAC005,2026-06-01,UBS Centro,Centro,30-44,M,HPV,1ª dose,Dor no local,Não
+VAC006,2026-05-08,UBS Sul,Aero Rancho,60+,F,HPV,Dose única,Nenhuma,Não
+VAC007,2026-05-18,UBS Centro,Centro,45-59,F,Influenza,2ª dose,Nenhuma,Sim
+VAC008,2026-05-10,UBS Leste,Tiradentes,12-17,M,Influenza,Reforço,Nenhuma,Não
+VAC009,2026-05-29,UBS Norte,Nova Lima,18-29,M,COVID-19,Reforço,Cansaço,Sim
+VAC010,2026-05-26,UBS Centro,Centro,30-44,M,Influenza,Dose única,Nenhuma,Não
+VAC011,2026-05-14,UBS Sul,Aero Rancho,60+,M,Influenza,Reforço,Dor no local,Não
+VAC012,2026-05-04,UBS Norte,Nova Lima,45-59,F,Influenza,Dose única,Febre leve,Sim
+VAC013,2026-05-04,UBS Leste,Tiradentes,12-17,M,COVID-19,Reforço,Febre leve,Sim
+VAC014,2026-05-07,UBS Oeste,Coophavila,12-17,M,Influenza,Reforço,Nenhuma,Não
+VAC015,2026-05-30,UBS Oeste,Coophavila,12-17,M,COVID-19,Dose única,Cansaço,Sim
+VAC016,2026-05-17,UBS Norte,Nova Lima,30-44,M,Hepatite B,Dose única,Dor no local,Sim
+VAC017,2026-05-11,UBS Leste,Tiradentes,60+,M,Influenza,Dose única,Nenhuma,Não
+VAC018,2026-05-28,UBS Sul,Aero Rancho,45-59,M,Influenza,Dose única,Dor no local,Sim
+VAC019,2026-05-29,UBS Oeste,Coophavila,30-44,F,Influenza,Dose única,Nenhuma,Não
+VAC020,2026-05-31,UBS Oeste,Coophavila,45-59,F,Influenza,1ª dose,Nenhuma,Sim
+VAC021,2026-05-13,UBS Oeste,Coophavila,18-29,F,Influenza,1ª dose,Cansaço,Sim
+VAC022,2026-05-31,UBS Oeste,Coophavila,60+,M,Influenza,2ª dose,Nenhuma,Não
+VAC023,2026-05-27,UBS Leste,Tiradentes,45-59,M,Influenza,1ª dose,Nenhuma,Sim
+VAC024,2026-05-08,UBS Centro,Centro,18-29,M,COVID-19,Dose única,Cansaço,Não
+VAC025,2026-05-17,UBS Oeste,Coophavila,18-29,F,Influenza,1ª dose,Dor no local,Não
+VAC026,2026-06-02,UBS Sul,Aero Rancho,18-29,F,COVID-19,Dose única,Nenhuma,Não
+VAC027,2026-06-05,UBS Centro,Centro,30-44,F,Influenza,Dose única,Dor no local,Sim
+VAC028,2026-05-08,UBS Norte,Nova Lima,18-29,F,HPV,2ª dose,Dor no local,Sim
+VAC029,2026-06-04,UBS Norte,Nova Lima,45-59,M,Influenza,Dose única,Nenhuma,Sim
+VAC030,2026-05-19,UBS Leste,Tiradentes,30-44,M,HPV,2ª dose,Dor no local,Sim
+VAC031,2026-05-28,UBS Oeste,Coophavila,60+,F,Influenza,Dose única,Cansaço,Sim
+VAC032,2026-05-11,UBS Oeste,Coophavila,18-29,F,COVID-19,Reforço,Nenhuma,Sim
+VAC033,2026-05-25,UBS Centro,Centro,12-17,F,COVID-19,Dose única,Dor no local,Não
+VAC034,2026-05-20,UBS Centro,Centro,60+,F,HPV,Dose única,Nenhuma,Sim
+VAC035,2026-05-03,UBS Norte,Nova Lima,18-29,F,HPV,Dose única,Nenhuma,Sim
+VAC036,2026-05-19,UBS Norte,Nova Lima,45-59,M,Hepatite B,Dose única,Dor no local,Não
+VAC037,2026-05-11,UBS Leste,Tiradentes,60+,M,Influenza,Reforço,Nenhuma,Sim
+VAC038,2026-05-28,UBS Sul,Aero Rancho,60+,M,HPV,1ª dose,Nenhuma,Sim
+VAC039,2026-05-19,UBS Centro,Centro,45-59,M,COVID-19,2ª dose,Cansaço,Sim
+VAC040,2026-05-22,UBS Norte,Nova Lima,45-59,F,COVID-19,Reforço,Nenhuma,Sim
+VAC041,2026-05-19,UBS Oeste,Coophavila,18-29,F,HPV,Dose única,Nenhuma,Sim
+VAC042,2026-05-12,UBS Sul,Aero Rancho,60+,F,COVID-19,1ª dose,Cansaço,Não
+VAC043,2026-05-03,UBS Centro,Centro,45-59,F,Influenza,Dose única,Cansaço,Sim
+VAC044,2026-05-16,UBS Centro,Centro,30-44,M,HPV,2ª dose,Dor no local,Sim
+VAC045,2026-05-27,UBS Norte,Nova Lima,45-59,F,COVID-19,Reforço,Cansaço,Sim
+VAC046,2026-06-06,UBS Centro,Centro,18-29,F,Hepatite B,2ª dose,Nenhuma,Sim
+VAC047,2026-05-13,UBS Oeste,Coophavila,12-17,M,COVID-19,Dose única,Dor no local,Não
+VAC048,2026-05-11,UBS Centro,Centro,45-59,F,HPV,1ª dose,Nenhuma,Não
+VAC049,2026-06-03,UBS Oeste,Coophavila,12-17,F,Hepatite B,Dose única,Dor no local,Sim
+VAC050,2026-05-19,UBS Oeste,Coophavila,30-44,F,COVID-19,2ª dose,Dor no local,Sim
